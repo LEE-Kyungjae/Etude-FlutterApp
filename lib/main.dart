@@ -13,7 +13,6 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-//a
 class LogIn extends StatefulWidget {
   @override
   State<LogIn> createState() => _LogInState();
