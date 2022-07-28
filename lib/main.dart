@@ -13,6 +13,8 @@ class MyApp extends StatelessWidget {
     );
   }
 }
+
+//a
 class LogIn extends StatefulWidget {
   @override
   State<LogIn> createState() => _LogInState();
@@ -47,22 +49,21 @@ class _LogInState extends State<LogIn> {
                 children: [
                   Padding(padding: EdgeInsets.only(top: 50)),
                   Center(
-                    child: CircleAvatar(
-                      radius: 110,
-                      backgroundColor: Colors.black87,
                       child: CircleAvatar(
-                        radius: 100,
-                        backgroundImage: AssetImage('assets/unnamed.jpg'),
-                      ),
-                    )
-                  ),
+                    radius: 110,
+                    backgroundColor: Colors.black87,
+                    child: CircleAvatar(
+                      radius: 100,
+                      backgroundImage: AssetImage('assets/unnamed.jpg'),
+                    ),
+                  )),
                   Form(
                     child: Theme(
                         data: ThemeData(
                           primaryColor: Colors.black87,
                           inputDecorationTheme: InputDecorationTheme(
-                            labelStyle:
-                                TextStyle(fontSize: 15.0, color: Colors.black87),
+                            labelStyle: TextStyle(
+                                fontSize: 15.0, color: Colors.black87),
                           ),
                         ),
                         child: Container(
