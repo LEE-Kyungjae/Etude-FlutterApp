@@ -34,7 +34,7 @@ class _PostBoxState extends State<PostBox> {
   var lettercomma;
   var ioswon;
   var androidwon;
-  var ios1;
+  late int ios1;
   var android1;
   TextEditingController controller1 = TextEditingController();
   TextEditingController controller2 = TextEditingController();
@@ -150,8 +150,13 @@ class _PostBoxState extends State<PostBox> {
                           letter = lunacalc(result, z);
                           resultcomma = f.format(result);
                           lettercomma = f.format(letter);
-                          /* ios1=letter as int;
-                          ioswon=ios(ios1);*/
+                          ios1=letter.round();
+                          android1=letter.round();
+
+                          ioswon=f.format(ios(ios1));
+                          androidwon=f.format(android(android1));
+
+                          print(ios1);
                         });
                       }
                     }),
@@ -176,7 +181,7 @@ class _PostBoxState extends State<PostBox> {
                 ),
               ),
               Text(
-                '아이폰 원',
+                '아이폰 약 $ioswon원',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 21,
@@ -184,7 +189,7 @@ class _PostBoxState extends State<PostBox> {
                 ),
               ),
               Text(
-                '안드로이드 원',
+                '안드로이드 약 $androidwon 원',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 21,
@@ -234,7 +239,12 @@ double lunacalc(int result, int z) {
 }
 
 int ios(int letter) {
-  int won = letter;
-  print(letter);
+  int won = (letter/4242*79000).round();
+
+  return won;
+}
+
+int android(int letter) {
+  int won = (letter/4242*75000).round();
   return won;
 }

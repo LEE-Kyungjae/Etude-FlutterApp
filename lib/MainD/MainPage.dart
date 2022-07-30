@@ -63,7 +63,7 @@ class MainPage extends StatelessWidget {
                 MainPageButton(
                     color: Colors.red,
                     text: Text(
-                      '경험치\n측정기',
+                      '장착',
                       style: TextStyle(
                           color: Colors.white, fontWeight: FontWeight.bold),
                     ),
@@ -71,7 +71,7 @@ class MainPage extends StatelessWidget {
                 MainPageButton(
                     color: Colors.red,
                     text: Text(
-                      '경험치\n측정기',
+                      '주엽',
                       style: TextStyle(
                           color: Colors.white, fontWeight: FontWeight.bold),
                     ),
@@ -79,7 +79,7 @@ class MainPage extends StatelessWidget {
                 MainPageButton(
                     color: Colors.red,
                     text: Text(
-                      '경험치\n측정기',
+                      '활포',
                       style: TextStyle(
                           color: Colors.white, fontWeight: FontWeight.bold),
                     ),
@@ -93,7 +93,7 @@ class MainPage extends StatelessWidget {
                 MainPageButton(
                     color: Colors.red,
                     text: Text(
-                      '경험치\n측정기',
+                      '카드',
                       style: TextStyle(
                           color: Colors.white, fontWeight: FontWeight.bold),
                     ),
