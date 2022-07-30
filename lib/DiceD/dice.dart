@@ -29,7 +29,7 @@ class _DiceState extends State<Dice> {
   var y; //목표레벨
   var result; //경험치
   var letter; //엽서량
- var resultcomma;
+  var resultcomma;
   var lettercomma;
 
   var _toggleList = <bool>[false, false, false];
@@ -45,7 +45,7 @@ class _DiceState extends State<Dice> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.redAccent,
-        title: Text('Mafia42 exp calc'),
+        title: Text('경험치 계산기'),
       ),
       body: Center(
         child: SingleChildScrollView(
@@ -53,7 +53,7 @@ class _DiceState extends State<Dice> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
-                margin: EdgeInsets.only(left: 20.0, right: 20.0),
+                margin: EdgeInsets.only(left: 100.0, right: 100.0),
                 width: 300.0,
                 child: TextField(
                   //시작하자마자 이메일에 키보드뜨는거 ->오토포커스
@@ -66,7 +66,7 @@ class _DiceState extends State<Dice> {
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(left: 20.0, right: 20.0),
+                margin: EdgeInsets.only(left: 100.0, right: 100.0),
                 width: 300.0,
                 child: TextField(
                   //시작하자마자 이메일에 키보드뜨는거 ->오토포커스
@@ -135,9 +135,8 @@ class _DiceState extends State<Dice> {
                           result = calc(x, y);
                           letter = lettercalc(
                               result, _isSwitch1, _isSwitch2, _isSwitch3);
-                          resultcomma=f.format(result);
-                          lettercomma=f.format(letter);
-
+                          resultcomma = f.format(result);
+                          lettercomma = f.format(letter);
                         });
                       }
                     }),
@@ -154,14 +153,13 @@ class _DiceState extends State<Dice> {
                 ),
               ),
               Text(
-                    '일엽 $lettercomma 장을 교환해야합니다.',
+                '일엽 $lettercomma 장을 교환해야합니다.',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 21,
                   color: Colors.black87,
                 ),
               ),
-
             ],
           ),
         ),
@@ -187,6 +185,9 @@ int calc(int m, int n) {
     output += k;
     k += 250;
   }
+  if (output == null) {
+    output = 0;
+  }
   return output;
 }
 
@@ -209,6 +210,9 @@ int lettercalc(int result, bool _isSwitch1, _isSwitch2, _isSwitch3) {
     letter = (result / letterexp).round();
   else {
     letter = (result / letterexp).round();
+  }
+  if (letter == null) {
+    letter = 0;
   }
   return letter;
 }

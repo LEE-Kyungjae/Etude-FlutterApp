@@ -27,12 +27,15 @@ class _PostBoxState extends State<PostBox> {
   var _isSwitch3 = false; //길드버프
   var x; //현재레벨
   var y; //목표레벨
+  var z;
   var result; //경험치
   var letter; //엽서량
   var resultcomma;
   var lettercomma;
-
-
+  var ioswon;
+  var androidwon;
+  var ios1;
+  var android1;
   TextEditingController controller1 = TextEditingController();
   TextEditingController controller2 = TextEditingController();
   TextEditingController controller3 = TextEditingController();
@@ -44,7 +47,7 @@ class _PostBoxState extends State<PostBox> {
       backgroundColor: Colors.white,
       appBar: AppBar(
         backgroundColor: Colors.redAccent,
-        title: Text('Mafia42 exp calc'),
+        title: Text('우체통 계산기'),
       ),
       body: Center(
         child: SingleChildScrollView(
@@ -72,6 +75,17 @@ class _PostBoxState extends State<PostBox> {
                   //autofocus: true,
                   controller: controller2,
                   decoration: InputDecoration(labelText: '목표 우편함'),
+                  keyboardType: TextInputType.number,
+                ),
+              ),
+              Container(
+                margin: EdgeInsets.only(left: 20.0, right: 20.0),
+                width: 200.0,
+                child: TextField(
+                  //시작하자마자 이메일에 키보드뜨는거 ->오토포커스
+                  //autofocus: true,
+                  controller: controller3,
+                  decoration: InputDecoration(labelText: '루나환율'),
                   keyboardType: TextInputType.number,
                 ),
               ),
@@ -127,16 +141,17 @@ class _PostBoxState extends State<PostBox> {
                     onPressed: () {
                       x = int.parse(controller1.text);
                       y = int.parse(controller2.text);
+                      z = int.parse(controller3.text);
                       if (x < 42 || x > y) {
                         showToast("number error");
                       } else {
                         setState(() {
                           result = calc(x, y);
-                          letter = lettercalc(
-                              result );
-                          resultcomma=f.format(result);
-                          lettercomma=f.format(letter);
-
+                          letter = lunacalc(result, z);
+                          resultcomma = f.format(result);
+                          lettercomma = f.format(letter);
+                          /* ios1=letter as int;
+                          ioswon=ios(ios1);*/
                         });
                       }
                     }),
@@ -153,14 +168,29 @@ class _PostBoxState extends State<PostBox> {
                 ),
               ),
               Text(
-                '암시장 확장시 $lettercomma 루나가 필요합니다.',
+                '루블 구매시 약 $lettercomma 루나가 필요합니다.',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 21,
                   color: Colors.black87,
                 ),
               ),
-
+              Text(
+                '아이폰 원',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 21,
+                  color: Colors.black87,
+                ),
+              ),
+              Text(
+                '안드로이드 원',
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 21,
+                  color: Colors.black87,
+                ),
+              ),
             ],
           ),
         ),
@@ -180,21 +210,31 @@ void showToast(String message) {
 int calc(int m, int n) {
   int now;
   int mok;
-  int i=0;
-  int stack=((n-m)~/10);//업그레이드 해야할 횟수
-  int luble=(m-42)*1000;
-  int output=0;
+  int i = 0;
+  int stack = ((n - m) ~/ 10); //업그레이드 해야할 횟수
+  int luble = (m - 42) * 1000;
+  int output = 0;
 
-  for(i=0;i<stack+1;i++){
-    output+=luble;
-    luble+=10000;
+  for (i = 0; i < stack + 1; i++) {
+    output += luble;
+    luble += 10000;
   }
   return output;
 }
 
-int lettercalc(int result) {
-  int letter = 0;
-  int letterexp = 210;
+double lunacalc(int result, int z) {
+  var buyluna;
+  var luna;
+  int luble;
+  int han;
+  luble = result;
+  han = z;
+  buyluna = (luble * han / 1000000) * 1.35;
+  return buyluna;
+}
 
-  return letter;
+int ios(int letter) {
+  int won = letter;
+  print(letter);
+  return won;
 }
