@@ -203,7 +203,7 @@ int lettercalc(int result, bool _isSwitch1, _isSwitch2, _isSwitch3) {
   }
 
   if (_isSwitch3 == true) {
-    letterexp -= 50;
+    letterexp += 50;
   }
 
   if (result % letterexp == 0)
