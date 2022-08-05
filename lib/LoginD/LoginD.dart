@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:mafiaexp/DiceD/dice.dart';
 import 'package:mafiaexp/MainD/MainPage.dart';
-//import 'package:flutter_svg';
+import 'package:flutter_svg/';
 class LogIn extends StatefulWidget {
   @override
   State<LogIn> createState() => _LogInState();
