@@ -16,7 +16,7 @@ class MainPageButton extends StatelessWidget {
   final String svgimage;
 
   @override
-  Widget build(BuildContext context) {
+  Widget build(BuildContext context) {//
     return Container(
       margin: EdgeInsets.fromLTRB(10, 20, 10, 0),
       child: SizedBox(
