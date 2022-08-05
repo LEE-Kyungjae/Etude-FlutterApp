@@ -1,5 +1,5 @@
-import 'dart:ffi';
-import 'dart:math';
+//import 'dart:ffi';
+//import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:intl/intl.dart';
@@ -32,7 +32,7 @@ class _DiceState extends State<Dice> {
   var resultcomma;
   var lettercomma;
 
-  var _toggleList = <bool>[false, false, false];
+  //var _toggleList = <bool>[false, false, false];
 
   TextEditingController controller1 = TextEditingController();
   TextEditingController controller2 = TextEditingController();
@@ -118,13 +118,13 @@ class _DiceState extends State<Dice> {
               ButtonTheme(
                 minWidth: 100.0,
                 height: 60.0,
-                child: RaisedButton(
+                child: ElevatedButton(
                     child: Icon(
                       Icons.play_arrow,
                       color: Colors.white,
                       size: 50.0,
                     ),
-                    color: Colors.blueAccent,
+                    //color: Colors.blueAccent,
                     onPressed: () {
                       x = int.parse(controller1.text);
                       y = int.parse(controller2.text);
@@ -211,8 +211,6 @@ int lettercalc(int result, bool _isSwitch1, _isSwitch2, _isSwitch3) {
   else {
     letter = (result / letterexp).round();
   }
-  if (letter == null) {
-    letter = 0;
-  }
+  //letter ??= 0;
   return letter;
 }

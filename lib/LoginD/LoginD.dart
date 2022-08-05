@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mafiaexp/ExpD/exp.dart';
+//import 'package:mafiaexp/ExpD/exp.dart';
 import 'package:mafiaexp/MainD/MainPage.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
@@ -85,9 +85,9 @@ class _LogInState extends State<LogIn> {
                               ButtonTheme(
                                   minWidth: 100.0,
                                   height: 50.0,
-                                  child: RaisedButton(
-                                    color: Colors.blueAccent,
-                                    elevation: 0.0,
+                                  child: ElevatedButton(
+                                    //color: Colors.blueAccent,
+                                    //elevation: 0.0,
                                     child: Icon(
                                       Icons.arrow_forward,
                                       color: Colors.white,
