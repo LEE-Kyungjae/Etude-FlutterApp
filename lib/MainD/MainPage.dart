@@ -20,106 +20,104 @@ class MainPage extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-
-                      Column(
-                          children:[ MainPageButton(
-                              color: Colors.red,
-                              text: Text(
-                                '경험치',
-                                style: TextStyle(
-                                    color: Colors.white,
-                                    fontWeight: FontWeight.bold),
-                              ),
-                              navigator: Dice()
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Column(children: [
+                      MainPageButton(
+                          color: Colors.red,
+                          text: Text(
+                            '경험치',
+                            style: TextStyle(
+                                color: Colors.white,
+                                fontWeight: FontWeight.bold),
                           ),
-                    ]
+                          navigator: Dice()),
+                    ]),
+                    MainPageButton(
+                      color: Colors.red,
+                      text: Text(
+                        ' 환율',
+                        style: TextStyle(
+                            color: Colors.white, fontWeight: FontWeight.bold),
+                      ),
+                      navigator: Dice(),
+                    ),
+                    MainPageButton(
+                        color: Colors.red,
+                        text: Text(
+                          '우체통',
+                          style: TextStyle(
+                              color: Colors.white, fontWeight: FontWeight.bold),
+                        ),
+                        navigator: PostBox()),
+                  ],
                 ),
-                MainPageButton(
-                  color: Colors.red,
-                  text: Text(
-                    ' 환율',
-                    style: TextStyle(
-                        color: Colors.white, fontWeight: FontWeight.bold),
-                  ),
-                  navigator: Dice(),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    MainPageButton(
+                        color: Colors.red,
+                        text: Text(
+                          '장착',
+                          style: TextStyle(
+                              color: Colors.white, fontWeight: FontWeight.bold),
+                        ),
+                        navigator: Dice()),
+                    MainPageButton(
+                        color: Colors.red,
+                        text: Text(
+                          '주엽',
+                          style: TextStyle(
+                              color: Colors.white, fontWeight: FontWeight.bold),
+                        ),
+                        navigator: Dice()),
+                    MainPageButton(
+                        color: Colors.red,
+                        text: Text(
+                          '활포',
+                          style: TextStyle(
+                              color: Colors.white, fontWeight: FontWeight.bold),
+                        ),
+                        navigator: Dice()),
+                  ],
                 ),
-                MainPageButton(
-                    color: Colors.red,
-                    text: Text(
-                      '우체통',
-                      style: TextStyle(
-                          color: Colors.white, fontWeight: FontWeight.bold),
-                    ),
-                    navigator: PostBox()),
+                Row(
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    MainPageButton(
+                        color: Colors.red,
+                        text: Text(
+                          '카드',
+                          style: TextStyle(
+                              color: Colors.white, fontWeight: FontWeight.bold),
+                        ),
+                        navigator: Dice()),
+                    MainPageButton(
+                        color: Colors.red,
+                        text: Text(
+                          '경험치\n측정기',
+                          style: TextStyle(
+                              color: Colors.white, fontWeight: FontWeight.bold),
+                        ),
+                        navigator: Dice()),
+                    MainPageButton(
+                        color: Colors.red,
+                        text: Text(
+                          '경험치\n측정기',
+                          style: TextStyle(
+                              color: Colors.white, fontWeight: FontWeight.bold),
+                        ),
+                        navigator: Dice()),
+                  ],
+                ),
               ],
             ),
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                MainPageButton(
-                    color: Colors.red,
-                    text: Text(
-                      '장착',
-                      style: TextStyle(
-                          color: Colors.white, fontWeight: FontWeight.bold),
-                    ),
-                    navigator: Dice()),
-                MainPageButton(
-                    color: Colors.red,
-                    text: Text(
-                      '주엽',
-                      style: TextStyle(
-                          color: Colors.white, fontWeight: FontWeight.bold),
-                    ),
-                    navigator: Dice()),
-                MainPageButton(
-                    color: Colors.red,
-                    text: Text(
-                      '활포',
-                      style: TextStyle(
-                          color: Colors.white, fontWeight: FontWeight.bold),
-                    ),
-                    navigator: Dice()),
-              ],
-            ),
-            Row(
-              crossAxisAlignment: CrossAxisAlignment.center,
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: [
-                MainPageButton(
-                    color: Colors.red,
-                    text: Text(
-                      '카드',
-                      style: TextStyle(
-                          color: Colors.white, fontWeight: FontWeight.bold),
-                    ),
-                    navigator: Dice()),
-                MainPageButton(
-                    color: Colors.red,
-                    text: Text(
-                      '경험치\n측정기',
-                      style: TextStyle(
-                          color: Colors.white, fontWeight: FontWeight.bold),
-                    ),
-                    navigator: Dice()),
-                MainPageButton(
-                    color: Colors.red,
-                    text: Text(
-                      '경험치\n측정기',
-                      style: TextStyle(
-                          color: Colors.white, fontWeight: FontWeight.bold),
-                    ),
-                    navigator: Dice()),
-              ],
-            ),
-            ],
           ),
         ),
       ),
-    ),);
+    );
   }
 }
