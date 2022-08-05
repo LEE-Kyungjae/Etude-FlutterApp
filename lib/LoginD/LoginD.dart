@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
-//import 'package:mafiaexp/ExpD/exp.dart';
 import 'package:mafiaexp/MainD/MainPage.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+//import 'package:mafiaexp/ExpD/exp.dart';
 
 class LogIn extends StatefulWidget {
   @override
@@ -74,8 +74,8 @@ class _LogInState extends State<LogIn> {
                               ),
                               TextField(
                                 controller: controller2,
-                                decoration: InputDecoration(
-                                    labelText: '패스워드를 입력하세요'),
+                                decoration:
+                                    InputDecoration(labelText: '패스워드를 입력하세요'),
                                 keyboardType: TextInputType.text,
                                 obscureText: true,
                               ),
