@@ -44,7 +44,7 @@ class _DiceState extends State<Dice> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.redAccent,
+          backgroundColor: Color(0xffAFB4FF),
         title: Text('경험치 계산기'),
       ),
       body: Center(

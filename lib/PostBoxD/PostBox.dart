@@ -46,8 +46,8 @@ class _PostBoxState extends State<PostBox> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Colors.redAccent,
-        title: Text('우체통 계산기'),
+        backgroundColor: Color(0xffB2E1FF),
+        title: Text('우체통 계산기',style: TextStyle(color: Colors.black87),),
       ),
       body: Center(
         child: SingleChildScrollView(

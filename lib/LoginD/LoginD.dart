@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:mafiaexp/DiceD/dice.dart';
 import 'package:mafiaexp/MainD/MainPage.dart';
-//import 'package:flutter_svg/';
+import 'package:flutter_svg/flutter_svg.dart';
+
 class LogIn extends StatefulWidget {
   @override
   State<LogIn> createState() => _LogInState();
@@ -16,7 +17,7 @@ class _LogInState extends State<LogIn> {
     return Scaffold(
       backgroundColor: Colors.orangeAccent,
       appBar: AppBar(
-        title: Text('Log in'),
+        title: Text('로그인'),
         backgroundColor: Colors.redAccent,
         elevation: 0,
         centerTitle: true,
@@ -36,14 +37,20 @@ class _LogInState extends State<LogIn> {
                 children: [
                   Padding(padding: EdgeInsets.only(top: 50)),
                   Center(
+                    child: CircleAvatar(
+                      radius: 110,
+                      backgroundColor: Colors.black87,
                       child: CircleAvatar(
-                        radius: 110,
-                        backgroundColor: Colors.black87,
-                        child: CircleAvatar(
-                          radius: 100,
-                          backgroundImage: AssetImage('assets/unnamed.jpg'),
+                        radius: 100,
+                        child: SvgPicture.asset(
+                          'assets/svg/animal/Artboard10.svg',
+                          width: 130,
+                          height: 130,
                         ),
-                      )),
+                        backgroundColor: Colors.grey,
+                      ),
+                    ),
+                  ),
                   Form(
                     child: Theme(
                         data: ThemeData(
@@ -62,13 +69,13 @@ class _LogInState extends State<LogIn> {
                                 //autofocus: true,
                                 controller: controller,
                                 decoration:
-                                InputDecoration(labelText: 'Enter dice'),
+                                    InputDecoration(labelText: '아이디를 입력하세요'),
                                 keyboardType: TextInputType.emailAddress,
                               ),
                               TextField(
                                 controller: controller2,
                                 decoration: InputDecoration(
-                                    labelText: 'Enter Password'),
+                                    labelText: '패스워드를 입력하세요'),
                                 keyboardType: TextInputType.text,
                                 obscureText: true,
                               ),
@@ -94,7 +101,7 @@ class _LogInState extends State<LogIn> {
                                             MaterialPageRoute(
                                                 builder:
                                                     (BuildContext context) =>
-                                                    MainPage()));
+                                                        MainPage()));
                                       } else if (controller.text == '42' &&
                                           controller2.text != '42') {
                                         showSnackBar2(context);
