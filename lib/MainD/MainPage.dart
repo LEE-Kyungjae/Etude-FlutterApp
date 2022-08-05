@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mafiaexp/DiceD/dice.dart';
+import 'package:mafiaexp/ExpD/exp.dart';
 import 'package:mafiaexp/MainD/MainButton.dart';
 import '../PostBoxD/PostBox.dart';
 

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mafiaexp/DiceD/dice.dart';
+import 'package:mafiaexp/ExpD/exp.dart';
 import 'package:mafiaexp/MainD/MainPage.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
