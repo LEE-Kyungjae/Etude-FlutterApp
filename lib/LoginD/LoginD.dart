@@ -17,7 +17,9 @@ class _LogInState extends State<LogIn> {
     return Scaffold(
       backgroundColor: Colors.orangeAccent,
       appBar: AppBar(
-        title: Text('로그인'),
+        title: Text(
+          '재재랜드',style: TextStyle(fontFamily: 'yunji4'),
+        ),
         backgroundColor: Colors.redAccent,
         elevation: 0,
         centerTitle: true,
@@ -43,9 +45,9 @@ class _LogInState extends State<LogIn> {
                       child: CircleAvatar(
                         radius: 100,
                         child: SvgPicture.asset(
-                          'assets/svg/animal/Artboard10.svg',
-                          width: 130,
-                          height: 130,
+                          'assets/svg/fantasy/Castle.svg',
+                          width: 150,
+                          height: 150,
                         ),
                         backgroundColor: Colors.grey,
                       ),

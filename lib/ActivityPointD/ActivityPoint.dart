@@ -6,12 +6,12 @@ import 'package:intl/intl.dart';
 
 var f = NumberFormat('###,###,###,###,###');
 
-class Exchange extends StatefulWidget {
+class ActivityPoint extends StatefulWidget {
   @override
-  State<Exchange> createState() => _ExchangeState();
+  State<ActivityPoint> createState() => _ActivityPointState();
 }
 
-class _ExchangeState extends State<Exchange> {
+class _ActivityPointState extends State<ActivityPoint> {
   int leftdice = 2;
   int rightdice = 2;
   int resultexp = 0;
@@ -27,6 +27,8 @@ class _ExchangeState extends State<Exchange> {
   var _isSwitch3 = false; //길드버프
   var x; //현재레벨
   var y; //목표레벨
+
+  var z; //목표레벨
   var result; //경험치
   var letter; //엽서량
   var resultcomma;
@@ -44,8 +46,8 @@ class _ExchangeState extends State<Exchange> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Color(0xffAFB4FF),
-        title: Text('환율 계산기'),
+        backgroundColor: Color(0xffB270A2),
+        title: Text('활동포인트 계산기'),
       ),
       body: Center(
         child: SingleChildScrollView(
@@ -60,7 +62,7 @@ class _ExchangeState extends State<Exchange> {
                   //autofocus: true,
                   controller: controller1,
                   decoration: InputDecoration(
-                    labelText: '현재레벨',
+                    labelText: '한달엽교량',
                   ),
                   keyboardType: TextInputType.number,
                 ),
@@ -72,7 +74,7 @@ class _ExchangeState extends State<Exchange> {
                   //시작하자마자 이메일에 키보드뜨는거 ->오토포커스
                   //autofocus: true,
                   controller: controller2,
-                  decoration: InputDecoration(labelText: '목표레벨'),
+                  decoration: InputDecoration(labelText: '주간 획초일수'),
                   keyboardType: TextInputType.number,
                 ),
               ),
@@ -81,7 +83,7 @@ class _ExchangeState extends State<Exchange> {
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   Row(mainAxisSize: MainAxisSize.min, children: [
-                    Text('경험치테두리'),
+                    Text('숙련옵션43'),
                     Switch(
                         value: _isSwitch1,
                         onChanged: (value) {
@@ -91,7 +93,7 @@ class _ExchangeState extends State<Exchange> {
                         }),
                   ]),
                   Row(mainAxisSize: MainAxisSize.min, children: [
-                    Text('명찰교환'),
+                    Text('게임경험치증가 명패'),
                     Switch(
                         value: _isSwitch2,
                         onChanged: (value) {
@@ -101,7 +103,7 @@ class _ExchangeState extends State<Exchange> {
                         }),
                   ]),
                   Row(mainAxisSize: MainAxisSize.min, children: [
-                    Text('길드버프'),
+                    Text('엽서경험치 테두리'),
                     Switch(
                         value: _isSwitch3,
                         onChanged: (value) {
@@ -128,13 +130,18 @@ class _ExchangeState extends State<Exchange> {
                     onPressed: () {
                       x = int.parse(controller1.text);
                       y = int.parse(controller2.text);
-                      if (x < 20 || x > y) {
-                        showToast("number error");
+
+
+                      if (y>7) {
+                        showToast("주간 획초일수는 7일을 넘을수없습니다.");
                       } else {
                         setState(() {
                           result = calc(x, y);
                           letter = lettercalc(
                               result, _isSwitch1, _isSwitch2, _isSwitch3);
+                          getexp(x, y,_isSwitch1,_isSwitch2,_isSwitch3);
+                          z=f.format( activitpoint2(700000));
+
                           resultcomma = f.format(result);
                           lettercomma = f.format(letter);
                         });
@@ -145,7 +152,7 @@ class _ExchangeState extends State<Exchange> {
                 height: 20,
               ),
               Text(
-                '획득해야하는 경험치는 $resultcomma 입니다.',
+                '',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 21,
@@ -153,7 +160,7 @@ class _ExchangeState extends State<Exchange> {
                 ),
               ),
               Text(
-                '일엽 $lettercomma 장을 교환해야합니다.',
+                ' 평균 활포는 $z 입니다.',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 21,
@@ -213,4 +220,33 @@ int lettercalc(int result, bool _isSwitch1, _isSwitch2, _isSwitch3) {
   }
   //letter ??= 0;
   return letter;
+}
+void getexp(int x, int y,bool _isSwitch1, _isSwitch2, _isSwitch3){
+  int y=100;
+  if (_isSwitch1 == true) {
+    y += 10;
+  }
+  if (_isSwitch2 == true) {
+    y += 10;
+  }
+
+  if (_isSwitch3 == true) {
+    y += 50;
+  }
+
+}
+int activitpoint2(int inputexp){
+  double x =(inputexp/720);//평균활포
+  int y=0;//차감량
+  double z;//합계
+  int k=0;
+  print(x);
+  y = (x / 100 * 99.3598).floor();
+  do {
+    k=y;
+    z = x + y;
+    y = (z / 100 * 99.3598).floor();
+    print(y);
+  }while(k!=y);
+  return y;
 }

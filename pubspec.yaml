@@ -61,7 +61,6 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
      - assets/
-     - assets/fonts/
      - assets/svg/animal/
      - assets/svg/monster/
      - assets/svg/fantasy/
@@ -78,12 +77,20 @@ flutter:
   # "family" key with the font family name, and a "fonts" key with a
   # list giving the asset and other descriptors for the font. For
   # example:
-  # fonts:å
-  #   - family: Schyler
-  #     fonts:
-  #       - asset: fonts/Schyler-Regular.ttf
-  #       - asset: fonts/Schyler-Italic.ttf
-  #         style: italic
+  fonts:
+    - family: yunji1
+      fonts:
+        - asset: assets/fonts/DalseoDarling.ttf
+    - family: yunji2
+      fonts:
+        - asset: assets/fonts/DalseoHealingBold.ttf
+    - family: yunji3
+      fonts:
+        - asset: assets/fonts/Mabinogi_Classic_TTF.ttf
+    - family: yunji4
+      fonts:
+        - asset: assets/fonts/RixInooAriDuri_Regular.ttf
+
   #   - family: Trajan Pro
   #     fonts:
   #       - asset: fonts/TrajanPro.ttf
