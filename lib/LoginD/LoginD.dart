@@ -18,7 +18,7 @@ class _LogInState extends State<LogIn> {
       backgroundColor: Colors.orangeAccent,
       appBar: AppBar(
         title: Text(
-          '재재랜드',style: TextStyle(fontFamily: 'yunji4'),
+          '재재랜드',style: TextStyle(fontFamily: 'HSSantokki-Regular'),
         ),
         backgroundColor: Colors.redAccent,
         elevation: 0,

@@ -78,18 +78,24 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
-    - family: yunji1
+    - family: DalseoDarling
       fonts:
         - asset: assets/fonts/DalseoDarling.ttf
-    - family: yunji2
+    - family: DalseoHealingBold
       fonts:
         - asset: assets/fonts/DalseoHealingBold.ttf
-    - family: yunji3
+    - family: Mabinogi_Classic
       fonts:
         - asset: assets/fonts/Mabinogi_Classic_TTF.ttf
-    - family: yunji4
+    - family: RixInooAriDuri_Regular
       fonts:
         - asset: assets/fonts/RixInooAriDuri_Regular.ttf
+    - family: HSSantokki-Regular
+      fonts:
+        - asset: assets/fonts/HSSantokki-Regular.ttf
+    - family: DalseoHealingMedium
+      fonts:
+        - asset: assets/fonts/DalseoHealingMedium.ttf
 
   #   - family: Trajan Pro
   #     fonts:
