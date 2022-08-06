@@ -5,16 +5,50 @@ import '../PostBoxD/PostBox.dart';
 import 'package:mafiaexp/ActivityPointD/ActivityPoint.dart';
 import 'package:mafiaexp/ExchangeD/Exchange.dart';
 
-class MainPage extends StatelessWidget {
+class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
 
   @override
-  Widget build(BuildContext context) {
-    return SafeArea(
-      child: MaterialApp(
-        debugShowCheckedModeBanner: false,
-        title: 'Dice game',
-        home: Scaffold(
+  State<MainPage> createState() => _MainPageState();
+}
+
+class _MainPageState extends State<MainPage> {
+  @override
+  Widget build(BuildContext context) => DefaultTabController(
+        length: 5,
+        child: Scaffold(
+          appBar: AppBar(
+            flexibleSpace: Container(
+              decoration: BoxDecoration(
+                  gradient: LinearGradient(
+                colors: [Color(0xffFFC23C), Color(0xffFA2FB5)],
+                begin: Alignment.bottomRight,
+                end: Alignment.bottomLeft,
+              )),
+            ),
+            bottom: TabBar(tabs: [
+              Tab(
+                icon: Icon(Icons.home),
+                text: "home",
+              ),
+              Tab(
+                icon: Icon(Icons.calculate),
+                text: "계산기",
+              ),
+              Tab(
+                icon: Icon(Icons.chat),
+                text: "채팅",
+              ),
+              Tab(
+                icon: Icon(Icons.person),
+                text: "프로필",
+              ),
+              Tab(
+                icon: Icon(Icons.settings),
+                text: "설정",
+              )
+            ]),
+          ),
           backgroundColor: Color(0xffA66CFF),
           body: Center(
             child: Column(
@@ -27,7 +61,7 @@ class MainPage extends StatelessWidget {
                   children: [
                     Column(children: [
                       MainPageButton(
-                        svgimage: "assets/svg/animal/Artboard10.svg",
+                          svgimage: "assets/svg/animal/Artboard10.svg",
                           color: Color(0xff9CEFE),
                           text: Text(
                             '경험치',
@@ -53,7 +87,8 @@ class MainPage extends StatelessWidget {
                         text: Text(
                           '우체통',
                           style: TextStyle(
-                              color: Colors.black87, fontWeight: FontWeight.bold),
+                              color: Colors.black87,
+                              fontWeight: FontWeight.bold),
                         ),
                         navigator: PostBox()),
                   ],
@@ -68,7 +103,8 @@ class MainPage extends StatelessWidget {
                         text: Text(
                           '장착',
                           style: TextStyle(
-                              color: Colors.black87, fontWeight: FontWeight.bold),
+                              color: Colors.black87,
+                              fontWeight: FontWeight.bold),
                         ),
                         navigator: Dice()),
                     MainPageButton(
@@ -110,7 +146,8 @@ class MainPage extends StatelessWidget {
                         text: Text(
                           '경험치',
                           style: TextStyle(
-                              color: Colors.black87, fontWeight: FontWeight.bold),
+                              color: Colors.black87,
+                              fontWeight: FontWeight.bold),
                         ),
                         navigator: Dice()),
                     MainPageButton(
@@ -119,7 +156,8 @@ class MainPage extends StatelessWidget {
                         text: Text(
                           '경험치',
                           style: TextStyle(
-                              color: Colors.black87, fontWeight: FontWeight.bold),
+                              color: Colors.black87,
+                              fontWeight: FontWeight.bold),
                         ),
                         navigator: Dice()),
                   ],
@@ -128,7 +166,5 @@ class MainPage extends StatelessWidget {
             ),
           ),
         ),
-      ),
-    );
-  }
+      );
 }

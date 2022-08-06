@@ -17,17 +17,36 @@ class _LogInState extends State<LogIn> {
     return Scaffold(
       backgroundColor: Colors.orangeAccent,
       appBar: AppBar(
-        title: Text(
-          '재재랜드',style: TextStyle(fontFamily: 'HSSantokki-Regular'),
-        ),
-        backgroundColor: Colors.redAccent,
-        elevation: 0,
+        backgroundColor: Colors.purple,
+        title: Text('그림자정부',style: TextStyle(fontFamily: "HSSantokki-Regular",fontSize: 40),),
         centerTitle: true,
-        leading: IconButton(icon: Icon(Icons.menu), onPressed: () {}),
-        actions: <Widget>[
-          IconButton(icon: Icon(Icons.search), onPressed: () {})
-        ],
+        shape: RoundedRectangleBorder(
+            borderRadius: BorderRadius.only(bottomLeft: Radius.circular(1360),bottomRight: Radius.circular(1360))),
+        bottom: PreferredSize(
+          preferredSize: Size.fromHeight(90),
+          child: SizedBox(),
+        ),
       ),
+      /*appBar: PreferredSize(
+        preferredSize: Size.fromHeight(100.0),
+        child: AppBar(
+          title: Text(
+            '그림자정부',
+            style: TextStyle(fontSize: 30,
+                fontFamily: 'HSSantokki-Regular', color: Colors.black87,
+            ),
+          ),
+          backgroundColor: Colors.redAccent,
+          shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.vertical(bottom: Radius.circular(140))),
+          elevation: 0,
+          centerTitle: true,
+          */ /*leading: IconButton(icon: Icon(Icons.menu), onPressed: () {}),
+          actions: <Widget>[
+            IconButton(icon: Icon(Icons.search), onPressed: () {})
+          ],*/ /*
+        ),
+      ),*/
       body: Builder(
         builder: (context) {
           return GestureDetector(
@@ -37,7 +56,7 @@ class _LogInState extends State<LogIn> {
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  Padding(padding: EdgeInsets.only(top: 50)),
+                  Padding(padding: EdgeInsets.only(top: 10)),
                   Center(
                     child: CircleAvatar(
                       radius: 110,
@@ -63,21 +82,19 @@ class _LogInState extends State<LogIn> {
                           ),
                         ),
                         child: Container(
-                          padding: EdgeInsets.all(40.0),
+                          padding: EdgeInsets.fromLTRB(80, 0, 80, 0),
                           child: Column(
                             children: [
                               TextField(
                                 //시작하자마자 이메일에 키보드뜨는거 ->오토포커스
                                 //autofocus: true,
                                 controller: controller,
-                                decoration:
-                                    InputDecoration(labelText: '아이디를 입력하세요'),
+                                decoration: InputDecoration(labelText: '아이디'),
                                 keyboardType: TextInputType.emailAddress,
                               ),
                               TextField(
                                 controller: controller2,
-                                decoration:
-                                    InputDecoration(labelText: '패스워드를 입력하세요'),
+                                decoration: InputDecoration(labelText: '패스워드'),
                                 keyboardType: TextInputType.text,
                                 obscureText: true,
                               ),
