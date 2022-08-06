@@ -1,30 +1,30 @@
 import 'package:flutter/material.dart';
 import 'package:mafiaexp/CalcD/Calc.dart';
-import 'package:google_mobile_ads/google_mobile_ads.dart';
+//import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:mafiaexp/main.dart';
 
 class MainPage extends StatefulWidget {
-  //const MainPage({Key? key}) : super(key: key);
+  const MainPage({Key? key}) : super(key: key);
 
   @override
   State<MainPage> createState() => _MainPageState();
 }
 
 class _MainPageState extends State<MainPage> {
-  int _counter = 0;
+  /*int _counter = 0;
   late BannerAd _bannerAd;
   bool _isAdLoaded = false;
-
-  @override
+*/
+  /*@override
   void initState() {
     super.initState();
     _initBannerAd();
-  }
+  }*/
 
-  _initBannerAd() {
+  /*_initBannerAd() {
     _bannerAd = BannerAd(
         size: AdSize.banner,
-        adUnitId: BannerAd.,
+        adUnitId: 'pub-3461746175008572',
         listener: BannerAdListener(
           onAdLoaded: (ad) {
             setState(() {
@@ -36,7 +36,7 @@ class _MainPageState extends State<MainPage> {
         request: AdRequest()
     );
     _bannerAd.load();
-  }
+  }*/
 
 
   @override
@@ -89,12 +89,12 @@ class _MainPageState extends State<MainPage> {
               buildPage('cvgf'),
             ],
           ),
-          bottomNavigationBar: _isAdLoaded ? Container(
+          /*bottomNavigationBar: _isAdLoaded ? Container(
             height: _bannerAd.size.height.toDouble(),
             width: _bannerAd.size.height.toDouble(),
             child: AdWidget(ad: _bannerAd,),
           ) : SizedBox(
-          ),
+          ),*/
         ),
       );
 }
