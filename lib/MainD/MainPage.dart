@@ -3,6 +3,7 @@ import 'package:mafiaexp/ExpD/exp.dart';
 import 'package:mafiaexp/MainD/MainButton.dart';
 import '../PostBoxD/PostBox.dart';
 import 'package:mafiaexp/ActivityPointD/ActivityPoint.dart';
+import 'package:mafiaexp/ExchangeD/Exchange.dart';
 
 class MainPage extends StatelessWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -44,7 +45,7 @@ class MainPage extends StatelessWidget {
                         style: TextStyle(
                             color: Colors.white, fontWeight: FontWeight.bold),
                       ),
-                      navigator: Dice(),
+                      navigator: Exchange(),
                     ),
                     MainPageButton(
                         svgimage: "assets/svg/animal/Artboard19.svg",
