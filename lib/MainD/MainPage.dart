@@ -26,14 +26,17 @@ class _MainPageState extends State<MainPage> {
                 end: Alignment.bottomLeft,
               )),
             ),
-            bottom: TabBar(tabs: [
-              Tab(
-                icon: Icon(Icons.home),
-                text: "home",
-              ),
+            bottom: TabBar(
+                indicatorColor: Colors.black87,
+                indicatorWeight: 5,
+                tabs: [
               Tab(
                 icon: Icon(Icons.calculate),
                 text: "계산기",
+              ),
+              Tab(
+                icon: Icon(Icons.tips_and_updates),
+                text: "공략",
               ),
               Tab(
                 icon: Icon(Icons.chat),
