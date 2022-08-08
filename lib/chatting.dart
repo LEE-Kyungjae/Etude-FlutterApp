@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
 
+Widget Chatting(String text) => Center(
 
-Widget Setting(String text) => Center(
 
 );

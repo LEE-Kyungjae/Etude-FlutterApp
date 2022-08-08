@@ -2,7 +2,11 @@ import 'package:flutter/material.dart';
 import 'package:mafiaexp/CalcD/Calc.dart';
 //import 'package:google_mobile_ads/google_mobile_ads.dart';
 import 'package:mafiaexp/main.dart';
+import 'package:mafiaexp/tip.dart';
+import 'package:mafiaexp/setting.dart';
+import 'package:mafiaexp/chatting.dart';
 
+import '../profile.dart';
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
 
@@ -11,20 +15,20 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-  /*int _counter = 0;
-  late BannerAd _bannerAd;
+  int _counter = 0;
+  //late BannerAd _bannerAd;
   bool _isAdLoaded = false;
-*/
-  /*@override
+/*
+  @override
   void initState() {
     super.initState();
     _initBannerAd();
   }*/
-
-  /*_initBannerAd() {
+/*
+  _initBannerAd() {
     _bannerAd = BannerAd(
         size: AdSize.banner,
-        adUnitId: 'pub-3461746175008572',
+        adUnitId: 'ca-app-pub-3461746175008572/8127796404',
         listener: BannerAdListener(
           onAdLoaded: (ad) {
             setState(() {
@@ -82,14 +86,15 @@ class _MainPageState extends State<MainPage> {
           backgroundColor: Color(0xffA66CFF),
           body: TabBarView(
             children: [
-              buildPage('Home Page'),
-              buildPage('adw'),
-              buildPage('weqwe'),
-              buildPage('sdgs'),
-              buildPage('cvgf'),
+              buildPageCalc('Calc'),
+              buildPageTip('Tip'),
+              Chatting('weqwe'),
+              profile('sdgs'),
+              Setting('cvgf'),
             ],
           ),
-          /*bottomNavigationBar: _isAdLoaded ? Container(
+          /*bottomNavigationBar:
+           _isAdLoaded ? Container(
             height: _bannerAd.size.height.toDouble(),
             width: _bannerAd.size.height.toDouble(),
             child: AdWidget(ad: _bannerAd,),

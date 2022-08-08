@@ -5,7 +5,7 @@ import 'package:mafiaexp/CalcD/PostBoxD/PostBox.dart';
 import 'package:mafiaexp/CalcD/ActivityPointD/ActivityPoint.dart';
 import 'package:mafiaexp/CalcD/ExchangeD/Exchange.dart';
 
-Widget buildPage(String text) => Center(
+Widget buildPageCalc(String text) => Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
