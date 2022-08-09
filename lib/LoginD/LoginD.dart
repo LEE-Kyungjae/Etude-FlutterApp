@@ -11,6 +11,7 @@ class LogIn extends StatefulWidget {
 class _LogInState extends State<LogIn> {
   TextEditingController controller = TextEditingController();
   TextEditingController controller2 = TextEditingController();
+  var _checkbox = false;
 
   @override
   Widget build(BuildContext context) {
@@ -18,10 +19,15 @@ class _LogInState extends State<LogIn> {
       backgroundColor: Colors.orangeAccent,
       appBar: AppBar(
         backgroundColor: Colors.purple,
-        title: Text('그림자정부',style: TextStyle(fontFamily: "HSSantokki-Regular",fontSize: 40),),
+        title: Text(
+          '그림자정부',
+          style: TextStyle(fontFamily: "HSSantokki-Regular", fontSize: 40),
+        ),
         centerTitle: true,
         shape: RoundedRectangleBorder(
-            borderRadius: BorderRadius.only(bottomLeft: Radius.circular(1360),bottomRight: Radius.circular(1360))),
+            borderRadius: BorderRadius.only(
+                bottomLeft: Radius.circular(1360),
+                bottomRight: Radius.circular(1360))),
         bottom: PreferredSize(
           preferredSize: Size.fromHeight(90),
           child: SizedBox(),
@@ -58,19 +64,11 @@ class _LogInState extends State<LogIn> {
                 children: [
                   Padding(padding: EdgeInsets.only(top: 10)),
                   Center(
-                    child: CircleAvatar(
-                      radius: 110,
-                      backgroundColor: Colors.black87,
-                      child: CircleAvatar(
-                        radius: 100,
-                        child: SvgPicture.asset(
-                          'assets/svg/fantasy/Castle.svg',
-                          width: 150,
-                          height: 150,
-                        ),
-                        backgroundColor: Colors.grey,
+                    child: SvgPicture.asset(
+                        'assets/svg/fantasy/Castle.svg',
+                        width: 150,
+                        height: 150,
                       ),
-                    ),
                   ),
                   Form(
                     child: Theme(
@@ -100,6 +98,21 @@ class _LogInState extends State<LogIn> {
                               ),
                               SizedBox(
                                 height: 30,
+                              ),
+                              Row(
+                                children: [
+                                  Checkbox(
+                                      value: _checkbox,
+                                      onChanged: (value) {
+                                        setState(() {
+                                          _checkbox = value!;
+                                        });
+                                      }),
+                                  Text('이용약관에 동의합니다'),
+                                ],
+                              ),
+                              SizedBox(
+                                height: 10,
                               ),
                               ButtonTheme(
                                   minWidth: 100.0,
