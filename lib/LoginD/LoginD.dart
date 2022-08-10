@@ -33,26 +33,6 @@ class _LogInState extends State<LogIn> {
           child: SizedBox(),
         ),
       ),
-      /*appBar: PreferredSize(
-        preferredSize: Size.fromHeight(100.0),
-        child: AppBar(
-          title: Text(
-            '그림자정부',
-            style: TextStyle(fontSize: 30,
-                fontFamily: 'HSSantokki-Regular', color: Colors.black87,
-            ),
-          ),
-          backgroundColor: Colors.redAccent,
-          shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.vertical(bottom: Radius.circular(140))),
-          elevation: 0,
-          centerTitle: true,
-          */ /*leading: IconButton(icon: Icon(Icons.menu), onPressed: () {}),
-          actions: <Widget>[
-            IconButton(icon: Icon(Icons.search), onPressed: () {})
-          ],*/ /*
-        ),
-      ),*/
       body: Builder(
         builder: (context) {
           return GestureDetector(

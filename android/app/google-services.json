@@ -1,0 +1,76 @@
+{
+  "project_info": {
+    "project_number": "1086072564722",
+    "project_id": "signin-43ace",
+    "storage_bucket": "signin-43ace.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1086072564722:android:3e90be26571b6209f2d96b",
+        "android_client_info": {
+          "package_name": "com.example.mafiaexp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1086072564722-1e76jqjq8t3b075t2hbksu6s73b6gq8q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.mafiaexp",
+            "certificate_hash": "d5b2a6a08ff97f8a196a765dac9022feacafe884"
+          }
+        },
+        {
+          "client_id": "1086072564722-6fg1ojk40l5bpmsmc01vkd3k4k09tug3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAybwpowOhGQSXxheB1gyGhlUgw2wdHQWg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1086072564722-6fg1ojk40l5bpmsmc01vkd3k4k09tug3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1086072564722:android:8a070b3bf1b597d2f2d96b",
+        "android_client_info": {
+          "package_name": "com.example.shadowgovernment"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1086072564722-6fg1ojk40l5bpmsmc01vkd3k4k09tug3.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAybwpowOhGQSXxheB1gyGhlUgw2wdHQWg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1086072564722-6fg1ojk40l5bpmsmc01vkd3k4k09tug3.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
