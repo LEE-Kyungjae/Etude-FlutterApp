@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mafiaexp/MainD/MainPage.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 //import 'package:mafiaexp/ExpD/exp.dart';
@@ -94,6 +95,17 @@ class _LogInState extends State<LogIn> {
                               SizedBox(
                                 height: 10,
                               ),
+                          ElevatedButton.icon(
+                              onPressed: (){},
+                            style: ElevatedButton.styleFrom(
+                              primary: Colors.white,
+                              onPrimary: Colors.black87,
+                              minimumSize: Size(double.infinity, 50),
+                            ),
+                            label: Text('구글아이디로 로그인하기'),
+                            icon: FaIcon(FontAwesomeIcons.google,color: Colors.redAccent,),
+                              ),
+                              
                               ButtonTheme(
                                   minWidth: 100.0,
                                   height: 50.0,
