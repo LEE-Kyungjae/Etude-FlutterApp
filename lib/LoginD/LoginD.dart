@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mafiaexp/MainD/MainPage.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+import 'package:mafiaexp/MainD/home_page.dart';
 import 'package:mafiaexp/provider/google_sign_in.dart';
 import 'package:provider/provider.dart';
 //import 'package:mafiaexp/ExpD/exp.dart';
@@ -101,8 +102,8 @@ class _LogInState extends State<LogIn> {
                               onPressed: (){
                                 final provider = Provider.of<GoogleSignInProvider>(context,listen: false);
                                 provider.googleLogin();
-
-
+                                Navigator.of(context);
+                                HomePage();
 
                               },
                             style: ElevatedButton.styleFrom(

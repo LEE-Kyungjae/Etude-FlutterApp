@@ -12,14 +12,12 @@ Future main() async{
 
 class MyApp extends StatelessWidget {
   @override
-  Widget build(BuildContext context) {
-    return ChangeNotifierProvider(
+  Widget build(BuildContext context) => ChangeNotifierProvider(
       create: (context)=>GoogleSignInProvider(),
       child: MaterialApp(
         debugShowCheckedModeBanner: false,
-        title: 'Dice game',
+        title: 'shadowgovernment',
         home: LogIn(),
       ),
     );
   }
-}
