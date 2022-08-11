@@ -102,8 +102,6 @@ class _LogInState extends State<LogIn> {
                               onPressed: (){
                                 final provider = Provider.of<GoogleSignInProvider>(context,listen: false);
                                 provider.googleLogin();
-                                Navigator.of(context);
-                                HomePage();
 
                               },
                             style: ElevatedButton.styleFrom(
