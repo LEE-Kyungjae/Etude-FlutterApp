@@ -49,10 +49,10 @@ class _LogInState extends State<LogIn> {
                   Padding(padding: EdgeInsets.only(top: 10)),
                   Center(
                     child: SvgPicture.asset(
-                        'assets/svg/fantasy/Castle.svg',
-                        width: 150,
-                        height: 150,
-                      ),
+                      'assets/svg/fantasy/Castle.svg',
+                      width: 150,
+                      height: 150,
+                    ),
                   ),
                   Form(
                     child: Theme(
@@ -83,7 +83,7 @@ class _LogInState extends State<LogIn> {
                               SizedBox(
                                 height: 30,
                               ),
-                              Row(
+                              /* Row(
                                 children: [
                                   Checkbox(
                                       value: _checkbox,
@@ -94,25 +94,7 @@ class _LogInState extends State<LogIn> {
                                       }),
                                   Text('이용약관에 동의합니다'),
                                 ],
-                              ),
-                              SizedBox(
-                                height: 10,
-                              ),
-                          ElevatedButton.icon(
-                              onPressed: (){
-                                final provider = Provider.of<GoogleSignInProvider>(context,listen: false);
-                                provider.googleLogin();
-
-                              },
-                            style: ElevatedButton.styleFrom(
-                              primary: Colors.white,
-                              onPrimary: Colors.black87,
-                              minimumSize: Size(double.infinity, 50),
-                            ),
-                            label: Text('구글아이디로 로그인하기'),
-                            icon: FaIcon(FontAwesomeIcons.google,color: Colors.redAccent,),
-                              ),
-                              
+                              ),*/
                               ButtonTheme(
                                   minWidth: 100.0,
                                   height: 50.0,
@@ -132,7 +114,7 @@ class _LogInState extends State<LogIn> {
                                             MaterialPageRoute(
                                                 builder:
                                                     (BuildContext context) =>
-                                                        MainPage()));
+                                                    MainPage()));
                                       } else if (controller.text == '42' &&
                                           controller2.text != '42') {
                                         showSnackBar2(context);
@@ -143,7 +125,168 @@ class _LogInState extends State<LogIn> {
                                         showSnackBar(context);
                                       }
                                     },
-                                  ))
+                                  )),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              Text("OR"),
+                              SizedBox(
+                                height: 10,
+                              ),
+                              ElevatedButton.icon(
+                                onPressed: () {
+                                  showDialog(
+                                      context: context,
+                                      builder: (BuildContext context) => Dialog(
+                                            shape: RoundedRectangleBorder(
+                                                borderRadius:
+                                                    BorderRadius.circular(
+                                                        10.0)),
+                                            backgroundColor: Color(0xffB1E1FF),
+                                            child: Column(
+                                              mainAxisSize: MainAxisSize.min,
+                                              children: [
+                                                Container(
+                                                    padding:
+                                                        EdgeInsets.fromLTRB(
+                                                            10, 10, 10, 10),
+                                                    child: Text(
+                                                      '이용약관',
+                                                      style: TextStyle(
+                                                          fontSize: 20),
+                                                    )),
+                                                Container(
+                                                  padding: EdgeInsets.fromLTRB(
+                                                      40, 10, 40, 10),
+                                                  child: Text(
+                                                      '본 어플을 사용하는 모든 이용자는 "그림자정부"의 이용약관 및 개인정보처리방침에 동의합니다.'),
+                                                ),
+                                                Container(
+                                                  /*
+                                                  padding: EdgeInsets.fromLTRB(
+                                                      10, 0, 10, 0),*/
+                                                  child: Column(
+                                                    children: [
+                                                      Container(
+                                                        height: 40,
+                                                        child: Row(
+                                                          mainAxisSize:
+                                                              MainAxisSize.min,
+                                                          mainAxisAlignment:
+                                                              MainAxisAlignment
+                                                                  .center,
+                                                          children: [
+                                                            /*Checkbox(
+                                                                value: _checkbox,
+                                                                onChanged: (value) {
+                                                                  setState(() {
+                                                                    _checkbox = value!;
+                                                                  });
+                                                                }),*/
+                                                            Text('그림자정부 이용약관'),
+                                                            TextButton(
+                                                              onPressed: () {},
+                                                              child:
+                                                                  Text("자세히보기"),
+                                                            ),
+                                                          ],
+                                                        ),
+                                                      ),
+                                                      Container(
+                                                        height: 40,
+                                                        padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                                                        child: Row(
+                                                          mainAxisAlignment:
+                                                              MainAxisAlignment
+                                                                  .center,
+                                                          children: [
+                                                            Text(
+                                                                '그림자정부 개인정보 처리방침'),
+                                                            TextButton(
+                                                              onPressed: () {},
+                                                              child:
+                                                                  Text("자세히보기"),
+                                                            )
+                                                          ],
+                                                        ),
+                                                      ),
+                                                    ],
+                                                  ),
+                                                ),
+                                                Container(
+                                                  padding: EdgeInsets.fromLTRB(
+                                                      10, 0, 10, 0),
+                                                  child: SizedBox(
+                                                    width: 250,
+                                                    height: 50,
+                                                    child: ElevatedButton.icon(
+                                                      onPressed: () {
+                                                        Navigator.pop(context);
+                                                        final provider = Provider
+                                                            .of<GoogleSignInProvider>(
+                                                                context,
+                                                                listen: false);
+                                                        provider.googleLogin();
+                                                      },
+                                                      label: Text('동의합니다.'),
+                                                      icon: FaIcon(
+                                                        FontAwesomeIcons.google,
+                                                        color: Colors.redAccent,
+                                                      ),
+                                                      style: ElevatedButton
+                                                          .styleFrom(
+                                                        primary: Colors.white,
+                                                        onPrimary:
+                                                            Colors.black87,
+                                                        minimumSize: Size(
+                                                            double.infinity,
+                                                            50),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                ),
+                                                Container(
+                                                  padding: EdgeInsets.fromLTRB(
+                                                      10, 10, 10, 20),
+                                                  child: SizedBox(
+                                                    width: 250,
+                                                    height: 50,
+                                                    child: ElevatedButton(
+                                                      onPressed: () {
+                                                        Navigator.pop(context);
+                                                      },
+                                                      child: Text('동의하지않습니다'),
+                                                      style: ElevatedButton
+                                                          .styleFrom(
+                                                        primary: Colors.white,
+                                                        onPrimary:
+                                                            Colors.black87,
+                                                        minimumSize: Size(
+                                                            double.infinity,
+                                                            50),
+                                                      ),
+                                                    ),
+                                                  ),
+                                                )
+                                              ],
+                                            ),
+                                          ));
+
+                                  /* final provider = Provider.of<GoogleSignInProvider>(context,listen: false);
+                                provider.googleLogin();*/
+                                },
+                                style: ElevatedButton.styleFrom(
+                                  primary: Colors.white,
+                                  onPrimary: Colors.black87,
+                                  minimumSize: Size(double.infinity, 50),
+                                ),
+                                label: Text('구글아이디로 로그인하기'),
+                                icon: FaIcon(
+                                  FontAwesomeIcons.google,
+                                  color: Colors.redAccent,
+                                ),
+                              ),
+
                             ],
                           ),
                         )),

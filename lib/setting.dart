@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:mafiaexp/provider/google_sign_in.dart';
+import 'package:provider/provider.dart';
 
 Widget Setting(String text) => Builder(builder: (context) {
       return Scaffold(
@@ -42,7 +44,7 @@ Widget Setting(String text) => Builder(builder: (context) {
 void logout(context) {
   showDialog(
       context: context,
-      barrierDismissible: false,
+      barrierDismissible: true,
       builder: (context) {
         return Dialog(
             child: Container(
@@ -69,6 +71,8 @@ void logout(context) {
                   ElevatedButton(
                       onPressed: () {
                         Navigator.of(context).pop();
+                        final provider = Provider.of<GoogleSignInProvider>(context,listen: false);
+                        provider.logout();
                       },
                       child: Text('예')),
                   SizedBox(
@@ -77,6 +81,7 @@ void logout(context) {
                   ElevatedButton(
                       onPressed: () {
                         Navigator.of(context).pop();
+
                       },
                       child: Text('아니오')),
                 ],

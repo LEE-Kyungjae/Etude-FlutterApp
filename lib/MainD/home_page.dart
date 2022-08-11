@@ -29,7 +29,7 @@ class _HomePageState extends State<HomePage> {
                 return Center(child: Text('something went wrong!'));
               } else {
                 print('failed2');
-                return MainPage();
+                return LogIn();
               }
             }));
   }
