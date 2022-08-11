@@ -185,7 +185,73 @@ class _LogInState extends State<LogIn> {
                                                                 }),*/
                                                             Text('그림자정부 이용약관'),
                                                             TextButton(
-                                                              onPressed: () {},
+                                                              onPressed: () {
+                                                                {
+                                                                  showDialog(
+                                                                      context: context,
+                                                                      builder: (BuildContext context) => Dialog(
+                                                                        shape: RoundedRectangleBorder(
+                                                                            borderRadius:
+                                                                            BorderRadius.circular(
+                                                                                10.0)),
+                                                                        backgroundColor: Color(0xffB1E1FF),
+                                                                        child: Column(
+                                                                          mainAxisSize: MainAxisSize.min,
+                                                                          children: [
+                                                                            Container(
+                                                                                padding:
+                                                                                EdgeInsets.fromLTRB(
+                                                                                    10, 10, 10, 10),
+                                                                                child: Row(
+                                                                                  children: [
+                                                                                    Text(
+                                                                                      '이용약관',
+                                                                                      style: TextStyle(
+                                                                                          fontSize: 20),
+                                                                                    ),
+                                                                                    ElevatedButton.icon(onPressed: (){}, icon: FaIcon(FontAwesomeIcons.xbox), label: Text(''), )
+
+                                                                                  ],
+                                                                                )),
+                                                                            Container(
+                                                                              padding: EdgeInsets.fromLTRB(
+                                                                                  40, 10, 40, 10),
+                                                                              child: Text(
+                                                                                  '이용약관 기재부분'),
+                                                                            ),
+                                                                            Container(
+
+                                                                              child: Column(
+                                                                                children: [
+                                                                                  Container(
+                                                                                    height: 40,
+                                                                                    child: Row(
+                                                                                      mainAxisSize:
+                                                                                      MainAxisSize.min,
+                                                                                      mainAxisAlignment:
+                                                                                      MainAxisAlignment
+                                                                                          .center,
+                                                                                      children: [
+
+                                                                                        Text('그림자정부 이용약관'),
+
+                                                                                      ],
+                                                                                    ),
+                                                                                  ),
+                                                                                ],
+                                                                              ),
+                                                                            ),
+
+                                                                          ],
+                                                                        ),
+                                                                      ));
+
+                                                                  /* final provider = Provider.of<GoogleSignInProvider>(context,listen: false);
+                                provider.googleLogin();*/
+                                                                }
+
+
+                                                              },
                                                               child:
                                                                   Text("자세히보기"),
                                                             ),
