@@ -2,10 +2,10 @@ import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:mafiaexp/MainD/MainPage.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-import 'package:mafiaexp/MainD/home_page.dart';
 import 'package:mafiaexp/provider/google_sign_in.dart';
 import 'package:provider/provider.dart';
-//import 'package:mafiaexp/ExpD/exp.dart';
+import 'package:mafiaexp/LoginD/Terms.dart';
+import 'package:mafiaexp/LoginD/policy.dart';
 
 class LogIn extends StatefulWidget {
   @override
@@ -114,7 +114,7 @@ class _LogInState extends State<LogIn> {
                                             MaterialPageRoute(
                                                 builder:
                                                     (BuildContext context) =>
-                                                    MainPage()));
+                                                        MainPage()));
                                       } else if (controller.text == '42' &&
                                           controller2.text != '42') {
                                         showSnackBar2(context);
@@ -187,70 +187,9 @@ class _LogInState extends State<LogIn> {
                                                             TextButton(
                                                               onPressed: () {
                                                                 {
-                                                                  showDialog(
-                                                                      context: context,
-                                                                      builder: (BuildContext context) => Dialog(
-                                                                        shape: RoundedRectangleBorder(
-                                                                            borderRadius:
-                                                                            BorderRadius.circular(
-                                                                                10.0)),
-                                                                        backgroundColor: Color(0xffB1E1FF),
-                                                                        child: Column(
-                                                                          mainAxisSize: MainAxisSize.min,
-                                                                          children: [
-                                                                            Container(
-                                                                                padding:
-                                                                                EdgeInsets.fromLTRB(
-                                                                                    10, 10, 10, 10),
-                                                                                child: Row(
-                                                                                  children: [
-                                                                                    Text(
-                                                                                      '이용약관',
-                                                                                      style: TextStyle(
-                                                                                          fontSize: 20),
-                                                                                    ),
-                                                                                    ElevatedButton.icon(onPressed: (){}, icon: FaIcon(FontAwesomeIcons.xbox), label: Text(''), )
-
-                                                                                  ],
-                                                                                )),
-                                                                            Container(
-                                                                              padding: EdgeInsets.fromLTRB(
-                                                                                  40, 10, 40, 10),
-                                                                              child: Text(
-                                                                                  '이용약관 기재부분'),
-                                                                            ),
-                                                                            Container(
-
-                                                                              child: Column(
-                                                                                children: [
-                                                                                  Container(
-                                                                                    height: 40,
-                                                                                    child: Row(
-                                                                                      mainAxisSize:
-                                                                                      MainAxisSize.min,
-                                                                                      mainAxisAlignment:
-                                                                                      MainAxisAlignment
-                                                                                          .center,
-                                                                                      children: [
-
-                                                                                        Text('그림자정부 이용약관'),
-
-                                                                                      ],
-                                                                                    ),
-                                                                                  ),
-                                                                                ],
-                                                                              ),
-                                                                            ),
-
-                                                                          ],
-                                                                        ),
-                                                                      ));
-
-                                                                  /* final provider = Provider.of<GoogleSignInProvider>(context,listen: false);
-                                provider.googleLogin();*/
+                                                                  build3(
+                                                                      context);
                                                                 }
-
-
                                                               },
                                                               child:
                                                                   Text("자세히보기"),
@@ -260,7 +199,9 @@ class _LogInState extends State<LogIn> {
                                                       ),
                                                       Container(
                                                         height: 40,
-                                                        padding: EdgeInsets.fromLTRB(10, 0, 10, 0),
+                                                        padding:
+                                                            EdgeInsets.fromLTRB(
+                                                                10, 0, 10, 0),
                                                         child: Row(
                                                           mainAxisAlignment:
                                                               MainAxisAlignment
@@ -269,7 +210,10 @@ class _LogInState extends State<LogIn> {
                                                             Text(
                                                                 '그림자정부 개인정보 처리방침'),
                                                             TextButton(
-                                                              onPressed: () {},
+                                                              onPressed: () {
+                                                                build2(
+                                                                    context);
+                                                              },
                                                               child:
                                                                   Text("자세히보기"),
                                                             )
@@ -279,6 +223,7 @@ class _LogInState extends State<LogIn> {
                                                     ],
                                                   ),
                                                 ),
+                                                SizedBox(height: 10,),
                                                 Container(
                                                   padding: EdgeInsets.fromLTRB(
                                                       10, 0, 10, 0),
@@ -287,12 +232,12 @@ class _LogInState extends State<LogIn> {
                                                     height: 50,
                                                     child: ElevatedButton.icon(
                                                       onPressed: () {
-                                                        Navigator.pop(context);
                                                         final provider = Provider
                                                             .of<GoogleSignInProvider>(
                                                                 context,
                                                                 listen: false);
                                                         provider.googleLogin();
+                                                        Navigator.pop(context);
                                                       },
                                                       label: Text('동의합니다.'),
                                                       icon: FaIcon(
@@ -352,7 +297,6 @@ class _LogInState extends State<LogIn> {
                                   color: Colors.redAccent,
                                 ),
                               ),
-
                             ],
                           ),
                         )),
