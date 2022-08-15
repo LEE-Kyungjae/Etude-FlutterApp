@@ -58,7 +58,7 @@ class _ExchangeState extends State<Exchange> {
                   //autofocus: true,
                   controller: controller1,
                   decoration: InputDecoration(
-                    labelText: '현재레벨',
+                    labelText: '판매루블',
                   ),
                   keyboardType: TextInputType.number,
                 ),
@@ -70,7 +70,7 @@ class _ExchangeState extends State<Exchange> {
                   //시작하자마자 이메일에 키보드뜨는거 ->오토포커스
                   //autofocus: true,
                   controller: controller2,
-                  decoration: InputDecoration(labelText: '목표레벨'),
+                  decoration: InputDecoration(labelText: '가격루나'),
                   keyboardType: TextInputType.number,
                 ),
               ),

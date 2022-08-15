@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:mafiaexp/profile.dart';
 import 'package:mafiaexp/provider/google_sign_in.dart';
 import 'package:provider/provider.dart';
 
@@ -10,6 +11,12 @@ Widget Setting(String text) => Builder(builder: (context) {
           Container(
             height: 50,
             color: Colors.amber,
+            child: ElevatedButton(
+              onPressed: () {
+                profile(text);
+              },
+              child: Text('계정'),
+            ),
           ),
           Container(
             height: 50,
