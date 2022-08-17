@@ -100,13 +100,13 @@ class _ExchangeState extends State<Exchange> {
                   ]),
                   Row(mainAxisSize: MainAxisSize.min, children: [
                     Text('길드버프'),
-                    Switch(
+                    /*Switch(
                         value: _isSwitch3,
                         onChanged: (value) {
                           setState(() {
                             _isSwitch3 = value;
                           });
-                        }),
+                        }),*/
                   ]),
                 ],
               ),
@@ -142,22 +142,22 @@ class _ExchangeState extends State<Exchange> {
               SizedBox(
                 height: 20,
               ),
-              Text(
+              /*Text(
                 '획득해야하는 경험치는 $resultcomma 입니다.',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 21,
                   color: Colors.black87,
                 ),
-              ),
-              Text(
+              ),*/
+              /*Text(
                 '일엽 $lettercomma 장을 교환해야합니다.',
                 style: TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 21,
                   color: Colors.black87,
                 ),
-              ),
+              ),*/
             ],
           ),
         ),

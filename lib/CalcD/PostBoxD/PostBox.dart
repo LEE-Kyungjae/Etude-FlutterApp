@@ -30,10 +30,11 @@ class _PostBoxState extends State<PostBox> {
   var z;
   var result; //경험치
   var letter; //엽서량
-  var resultcomma;
-  var lettercomma;
-  var ioswon;
-  var androidwon;
+
+  var resultcomma = f.format(0);
+  var lettercomma = f.format(0);
+  var ioswon= f.format(0);
+  var androidwon= f.format(0);
   late int ios1;
   var android1;
   TextEditingController controller1 = TextEditingController();
