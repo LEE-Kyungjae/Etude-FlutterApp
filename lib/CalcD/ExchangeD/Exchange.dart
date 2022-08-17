@@ -27,8 +27,13 @@ class _ExchangeState extends State<Exchange> {
   var y; //목표레벨
   var result; //경험치
   var letter; //엽서량
-  var resultcomma;
-  var lettercomma;
+  var resultcomma = f.format(0);
+  var lettercomma = f.format(0);
+  var xf ;
+  var resulty ;
+  var resultlu;
+  var real;
+  var realstring;
 
   //var _toggleList = <bool>[false, false, false];
 
@@ -74,42 +79,17 @@ class _ExchangeState extends State<Exchange> {
                   keyboardType: TextInputType.number,
                 ),
               ),
-              Column(
-                mainAxisAlignment: MainAxisAlignment.end,
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: [
-                  Row(mainAxisSize: MainAxisSize.min, children: [
-                    Text('경험치테두리'),
-                    Switch(
-                        value: _isSwitch1,
-                        onChanged: (value) {
-                          setState(() {
-                            _isSwitch1 = value;
-                          });
-                        }),
-                  ]),
-                  Row(mainAxisSize: MainAxisSize.min, children: [
-                    Text('명찰교환'),
-                    Switch(
-                        value: _isSwitch2,
-                        onChanged: (value) {
-                          setState(() {
-                            _isSwitch2 = value;
-                          });
-                        }),
-                  ]),
-                  Row(mainAxisSize: MainAxisSize.min, children: [
-                    Text('길드버프'),
-                    /*Switch(
-                        value: _isSwitch3,
-                        onChanged: (value) {
-                          setState(() {
-                            _isSwitch3 = value;
-                          });
-                        }),*/
-                  ]),
-                ],
+              SizedBox(height: 10,),
+              Text(
+                  '표시상 환율 $resulty'
               ),
+              Text(
+                  '실제 환율 $realstring'
+              ),
+              Text(
+                  '판매가격 $resultlu 루나'
+              ),
+
               SizedBox(
                 height: 60.0,
               ),
@@ -126,17 +106,18 @@ class _ExchangeState extends State<Exchange> {
                     onPressed: () {
                       x = int.parse(controller1.text);
                       y = int.parse(controller2.text);
-                      if (x < 20 || x > y) {
-                        showToast("number error");
-                      } else {
+                      xf=exchangeA(x, y);
+                      resulty=exchangeB(xf,y);
                         setState(() {
                           result = calc(x, y);
                           letter = lettercalc(
                               result, _isSwitch1, _isSwitch2, _isSwitch3);
-                          resultcomma = f.format(result);
+                          resultcomma = f.format(resulty);
                           lettercomma = f.format(letter);
+                          resultlu = f.format(getruna(y));
+                          real=realex(x, y);
+                          realstring=real.toStringAsFixed(3);
                         });
-                      }
                     }),
               ),
               SizedBox(
@@ -166,13 +147,6 @@ class _ExchangeState extends State<Exchange> {
   }
 }
 
-void showToast(String message) {
-  Fluttertoast.showToast(
-      msg: message,
-      backgroundColor: Colors.blueGrey,
-      toastLength: Toast.LENGTH_SHORT,
-      gravity: ToastGravity.BOTTOM);
-}
 
 int calc(int m, int n) {
   int i = 0;
@@ -192,18 +166,15 @@ int calc(int m, int n) {
 int lettercalc(int result, bool _isSwitch1, _isSwitch2, _isSwitch3) {
   int letter = 0;
   int letterexp = 210;
-
   if (_isSwitch1 == true) {
     letterexp += 10;
   }
   if (_isSwitch2 == true) {
     letterexp += 10;
   }
-
   if (_isSwitch3 == true) {
     letterexp += 50;
   }
-
   if (result % letterexp == 0)
     letter = (result / letterexp).round();
   else {
@@ -212,3 +183,39 @@ int lettercalc(int result, bool _isSwitch1, _isSwitch2, _isSwitch3) {
   //letter ??= 0;
   return letter;
 }
+
+double exchangeA(int x, int y){
+  int z=0;
+  double xf;
+  int xi;
+  xf=1000000/x*100;
+  xi=xf.floor();
+  xf=xi/100;
+  return xf;
+}
+int exchangeB(double xf, int y){
+  int yi;
+  print("y값 $y");
+  yi=(xf*y).floor();
+  print("x값 $yi");
+  return yi;
+}
+
+int getruna(int y){
+  int geruna;
+  geruna=(y*1.35).ceil();
+  return geruna;
+}
+
+double realex(int x,int y){
+  double realex;
+  realex=(x/y);
+  return realex;
+}
+
+
+
+
+
+
+
