@@ -4,6 +4,7 @@ import 'package:mafiaexp/MainD/MainButton.dart';
 import 'package:mafiaexp/CalcD/PostBoxD/PostBox.dart';
 import 'package:mafiaexp/CalcD/ActivityPointD/ActivityPoint.dart';
 import 'package:mafiaexp/CalcD/ExchangeD/Exchange.dart';
+import 'package:mafiaexp/CalcD/CardD/Card.dart';
 
 Widget buildPageCalc(String text) => Center(
       child: Column(
@@ -91,7 +92,7 @@ Widget buildPageCalc(String text) => Center(
                     style: TextStyle(
                         color: Colors.white, fontWeight: FontWeight.bold),
                   ),
-                  navigator: Dice()),
+                  navigator: CardA()),
               MainPageButton(
                   svgimage: "assets/svg/animal/Artboard17.svg",
                   color: Color(0xffABC9FF),
