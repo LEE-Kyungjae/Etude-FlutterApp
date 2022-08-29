@@ -37,14 +37,14 @@ class _CardAState extends State<CardA> {
   var kijun = '기준환율에 정확하게 맞아떨어지지 않아\n기준환율에 제일 근접한 수치로 환율치를 변경했습니다.';
   var kijun2 = "";
   var new1;
-  var a6;
-  var a5;
-  var a4;
-  var a3;
-  var b5;
-  var b4;
-  var b3;
-  var b2;
+  var a6=0;
+  var a5=0;
+  var a4=0;
+  var a3=0;
+  var b5=0;
+  var b4=0;
+  var b3=0;
+  var b2=0;
   var new2;
   var card6 = 0;
   var card5 = 0;
@@ -116,7 +116,7 @@ class _CardAState extends State<CardA> {
                         keyboardType: TextInputType.number,
                       ),
                     ),
-                    Container(
+                   /* Container(
                       margin: EdgeInsets.only(left: 100.0, right: 100.0),
                       width: 300.0,
                       child: TextField(
@@ -128,7 +128,7 @@ class _CardAState extends State<CardA> {
                         ),
                         keyboardType: TextInputType.number,
                       ),
-                    ),
+                    ),*/
                     Text('현재 카드수'),
                     Container(
                       margin: EdgeInsets.only(left: 100.0, right: 100.0),
@@ -167,7 +167,7 @@ class _CardAState extends State<CardA> {
                         keyboardType: TextInputType.number,
                       ),
                     ),
-                    Container(
+                    /*Container(
                       margin: EdgeInsets.only(left: 100.0, right: 100.0),
                       width: 300.0,
                       child: TextField(
@@ -179,7 +179,7 @@ class _CardAState extends State<CardA> {
                         ),
                         keyboardType: TextInputType.number,
                       ),
-                    ),
+                    ),*/
                     SizedBox(
                       height: 10,
                     ),
