@@ -25,6 +25,7 @@ class _DiceState extends State<Dice> {
   var _isSwitch1 = false; //경증테
   var _isSwitch2 = false; //명찰보유
   var _isSwitch3 = false; //길드버프
+  var _isSwitch4 = false; //핑방
   var x; //현재레벨
   var y; //목표레벨
   var result; //경험치
@@ -60,7 +61,7 @@ class _DiceState extends State<Dice> {
                   //autofocus: true,
                   controller: controller1,
                   decoration: InputDecoration(
-                    labelText: '현재레벨',
+                    labelText: '현재레벨 (0%기준)',
                   ),
                   keyboardType: TextInputType.number,
                 ),
@@ -72,7 +73,7 @@ class _DiceState extends State<Dice> {
                   //시작하자마자 이메일에 키보드뜨는거 ->오토포커스
                   //autofocus: true,
                   controller: controller2,
-                  decoration: InputDecoration(labelText: '목표레벨'),
+                  decoration: InputDecoration(labelText: '목표레벨 (0%기준)'),
                   keyboardType: TextInputType.number,
                 ),
               ),
@@ -81,7 +82,7 @@ class _DiceState extends State<Dice> {
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   Row(mainAxisSize: MainAxisSize.min, children: [
-                    Text('경험치테두리'),
+                    Text('경증테'),
                     Switch(
                         value: _isSwitch1,
                         onChanged: (value) {
@@ -91,7 +92,7 @@ class _DiceState extends State<Dice> {
                         }),
                   ]),
                   Row(mainAxisSize: MainAxisSize.min, children: [
-                    Text('명찰교환'),
+                    Text('명찰명패'),
                     Switch(
                         value: _isSwitch2,
                         onChanged: (value) {
@@ -107,6 +108,16 @@ class _DiceState extends State<Dice> {
                         onChanged: (value) {
                           setState(() {
                             _isSwitch3 = value;
+                          });
+                        }),
+                  ]),
+                  Row(mainAxisSize: MainAxisSize.min, children: [
+                    Text('핑방'),
+                    Switch(
+                        value: _isSwitch4,
+                        onChanged: (value) {
+                          setState(() {
+                            _isSwitch4 = value;
                           });
                         }),
                   ]),
@@ -134,7 +145,7 @@ class _DiceState extends State<Dice> {
                         setState(() {
                           result = calc(x, y);
                           letter = lettercalc(
-                              result, _isSwitch1, _isSwitch2, _isSwitch3);
+                              result, _isSwitch1, _isSwitch2, _isSwitch3, _isSwitch4);
                           resultcomma = f.format(result);
                           lettercomma = f.format(letter);
                         });
@@ -175,12 +186,13 @@ void showToast(String message) {
       toastLength: Toast.LENGTH_SHORT,
       gravity: ToastGravity.BOTTOM);
 }
-
+//m= cotroll1 n=cotroll2
 int calc(int m, int n) {
   int i = 0;
   int output = 0;
   int z = n - m;
   int k = (m - 20) * 250 + 4000;
+  print(k);
   for (i = 0; i < z; i++) {
     output += k;
     k += 250;
@@ -191,15 +203,20 @@ int calc(int m, int n) {
   return output;
 }
 
-int lettercalc(int result, bool _isSwitch1, _isSwitch2, _isSwitch3) {
+//
+int lettercalc(int result, bool _isSwitch1, _isSwitch2, _isSwitch3, _isSwitch4) {
   int letter = 0;
-  int letterexp = 210;
+  int letterexp = 160;
 
   if (_isSwitch1 == true) {
     letterexp += 10;
   }
   if (_isSwitch2 == true) {
     letterexp += 10;
+  }
+
+  if (_isSwitch3 == true) {
+    letterexp += 60;
   }
 
   if (_isSwitch3 == true) {
