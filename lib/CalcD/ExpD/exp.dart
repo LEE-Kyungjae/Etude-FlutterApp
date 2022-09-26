@@ -206,7 +206,7 @@ int calc(int m, int n) {
 //
 int lettercalc(int result, bool _isSwitch1, _isSwitch2, _isSwitch3, _isSwitch4) {
   int letter = 0;
-  int letterexp = 160;
+  int letterexp = 100;
 
   if (_isSwitch1 == true) {
     letterexp += 10;
