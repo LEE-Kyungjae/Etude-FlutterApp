@@ -44,6 +44,7 @@ dependencies:
 
   # State Management
   provider: ^5.0.0
+  logger: ^1.1.0
 
  # google_mobile_ads: ^2.0.0
 dev_dependencies:
