@@ -19,9 +19,9 @@ class _CardAState extends State<CardA> {
 
   late String input3;
   var k;
-  var _isSwitch1 = false; //경증테
-  var _isSwitch2 = false; //명찰보유
-  var _isSwitch3 = false; //길드버프
+//  var _isSwitch1 = false; //경증테
+ // var _isSwitch2 = false; //명찰보유
+//  var _isSwitch3 = false; //길드버프
   var x; //현재레벨
   var y; //목표레벨
   var result; //경험치
@@ -307,7 +307,7 @@ int lettercalc(int result, bool _isSwitch1, _isSwitch2, _isSwitch3) {
 
 double exchangeA(int x, int y) {
   //기준환율 계산
-  int z = 0;
+ // int z = 0;
   double xf;
   int xi;
   xf = 1000000 / x * 100;

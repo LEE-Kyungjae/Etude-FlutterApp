@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mafiaexp/profile.dart';
+import 'package:mafiaexp/MainD/MarketD/profile.dart';
 import 'package:mafiaexp/provider/google_sign_in.dart';
 import 'package:provider/provider.dart';
 

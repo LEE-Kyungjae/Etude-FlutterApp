@@ -1,15 +1,15 @@
-import 'package:firebase_auth/firebase_auth.dart';
+//import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:mafiaexp/CalcD/Calc.dart';
-import 'package:mafiaexp/LoginD/LoginD.dart';
+import 'package:mafiaexp/MainD/CalcD/Calc.dart';
+//import 'package:mafiaexp/LoginD/LoginD.dart';
 
 //import 'package:google_mobile_ads/google_mobile_ads.dart';
-import 'package:mafiaexp/main.dart';
-import 'package:mafiaexp/tip.dart';
-import 'package:mafiaexp/setting.dart';
-import 'package:mafiaexp/chatting.dart';
+//import 'package:mafiaexp/main.dart';
+import 'package:mafiaexp/MainD/TipD/tip.dart';
+import 'package:mafiaexp/MainD/SettD/setting.dart';
+import 'package:mafiaexp/MainD/ChatD/chatting.dart';
 
-import '../profile.dart';
+import 'MarketD/profile.dart';
 
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -19,8 +19,8 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-  int _counter = 0;
-  bool _isAdLoaded = false;
+ // int _counter = 0;
+//  bool _isAdLoaded = false;
 
   @override
   Widget build(BuildContext context) => DefaultTabController(

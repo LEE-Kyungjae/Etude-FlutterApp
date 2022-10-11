@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
+//import 'package:fluttertoast/fluttertoast.dart';
 import 'package:intl/intl.dart';
 
 var f = NumberFormat('###,###,###,###,###');
@@ -147,8 +147,8 @@ class _ExchangeState extends State<Exchange> {
                     ),
                     //color: Colors.blueAccent,
                     onPressed: () {
-                      var a = int.parse(controller3.text);
-                      var b = int.parse(controller4.text);
+                  //    var a = int.parse(controller3.text);
+                   //   var b = int.parse(controller4.text);
                       xf = exchangeA(x, y);
                       resulty = exchangeB(xf, y);
                       setState(() {
@@ -211,7 +211,7 @@ int lettercalc(int result, bool _isSwitch1, _isSwitch2, _isSwitch3) {
 }
 
 double exchangeA(int x, int y) {//기준환율 계산
-  int z = 0;
+//  int z = 0;
   double xf;
   int xi;
   xf = 1000000 / x * 100;

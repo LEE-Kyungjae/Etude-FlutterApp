@@ -1,4 +1,3 @@
-
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:intl/intl.dart';
@@ -221,7 +220,7 @@ int lettercalc(int result, bool _isSwitch1, _isSwitch2, _isSwitch3) {
   return letter;
 }
 void getexp(int x, int y,bool _isSwitch1, _isSwitch2, _isSwitch3){
-  int y=100;
+//  int y=100;
   if (_isSwitch1 == true) {
     y += 10;
   }

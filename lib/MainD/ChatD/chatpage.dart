@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mafiaexp/chathomepage.dart';
+import 'package:mafiaexp/MainD/ChatD/chathomepage.dart';
 
     class chatpage extends StatelessWidget {
       const chatpage({Key? key}) : super(key: key);

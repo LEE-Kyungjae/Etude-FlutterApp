@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:mafiaexp/CalcD/ExpD/exp.dart';
+import 'package:mafiaexp/MainD/CalcD/ExpD/exp.dart';
 import 'package:mafiaexp/MainD/MainButton.dart';
-import 'package:mafiaexp/CalcD/PostBoxD/PostBox.dart';
-import 'package:mafiaexp/CalcD/ActivityPointD/ActivityPoint.dart';
-import 'package:mafiaexp/CalcD/ExchangeD/Exchange.dart';
-import 'package:mafiaexp/CalcD/CardD/Card.dart';
+import 'package:mafiaexp/MainD/CalcD/PostBoxD/PostBox.dart';
+import 'package:mafiaexp/MainD/CalcD/ActivityPointD/ActivityPoint.dart';
+import 'package:mafiaexp/MainD/CalcD/ExchangeD/Exchange.dart';
+import 'package:mafiaexp/MainD/CalcD/CardD/Card.dart';
 
 Widget buildPageCalc(String text) => Center(
       child: Column(

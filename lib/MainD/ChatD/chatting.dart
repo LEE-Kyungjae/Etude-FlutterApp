@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mafiaexp/chatpage.dart';
+import 'package:mafiaexp/MainD/ChatD/chatpage.dart';
 
 Widget Chatting(String text) => Center(
       child: Builder(

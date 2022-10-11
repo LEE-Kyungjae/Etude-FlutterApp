@@ -1,5 +1,5 @@
-import 'dart:ffi';
-import 'dart:math';
+//import 'dart:ffi';
+//import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:intl/intl.dart';
@@ -22,9 +22,9 @@ class _PostBoxState extends State<PostBox> {
 
   late String input3;
   var k;
-  var _isSwitch1 = false; //경증테
-  var _isSwitch2 = false; //명찰보유
-  var _isSwitch3 = false; //길드버프
+//  var _isSwitch1 = false; //경증테
+//  var _isSwitch2 = false; //명찰보유
+ // var _isSwitch3 = false; //길드버프
   var x; //현재레벨
   var y; //목표레벨
   var z;
@@ -132,13 +132,13 @@ class _PostBoxState extends State<PostBox> {
               ButtonTheme(
                 minWidth: 100.0,
                 height: 60.0,
-                child: RaisedButton(
+                child: ElevatedButton(
                     child: Icon(
                       Icons.play_arrow,
                       color: Colors.white,
                       size: 50.0,
                     ),
-                    color: Colors.blueAccent,
+                   // color: Colors.blueAccent,
                     onPressed: () {
                       x = int.parse(controller1.text);
                       y = int.parse(controller2.text);
@@ -214,8 +214,8 @@ void showToast(String message) {
 }
 
 int calc(int m, int n) {
-  int now;
-  int mok;
+//  int now;
+//  int mok;
   int i = 0;
   int stack = ((n - m) ~/ 10); //업그레이드 해야할 횟수
   int luble = (m - 42) * 1000;
@@ -230,7 +230,7 @@ int calc(int m, int n) {
 
 double lunacalc(int result, int z) {
   var buyluna;
-  var luna;
+// var luna;
   int luble;
   int han;
   luble = result;
