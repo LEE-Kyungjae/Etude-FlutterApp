@@ -38,6 +38,8 @@ dependencies:
   # Google Sign in
   firebase_auth: ^1.1.4
   google_sign_in: ^5.0.3
+  # Google Admob
+  google_mobile_ads: ^2.0.1
 
   # Google Icon
   font_awesome_flutter: ^9.0.0
