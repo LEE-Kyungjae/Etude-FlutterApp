@@ -1,16 +1,17 @@
 //import 'package:firebase_auth/firebase_auth.dart';
+import 'dart:io';
+
 import 'package:flutter/material.dart';
 import 'package:mafiaexp/MainD/CalcD/Calc.dart';
 //import 'package:mafiaexp/LoginD/LoginD.dart';
-
-//import 'package:google_mobile_ads/google_mobile_ads.dart';
 //import 'package:mafiaexp/main.dart';
 import 'package:mafiaexp/MainD/TipD/tip.dart';
 import 'package:mafiaexp/MainD/SettD/setting.dart';
 import 'package:mafiaexp/MainD/ChatD/chatting.dart';
-
 import 'MarketD/profile.dart';
+import 'package:google_mobile_ads/google_mobile_ads.dart';
 
+//메인페이지 -탭기능
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
 
@@ -19,8 +20,28 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
- // int _counter = 0;
-//  bool _isAdLoaded = false;
+  //앱오프닝광고    ca-app-pub-3940256099942544/3419835294
+  //배너광고        ca-app-pub-3940256099942544/6300978111
+  //전면광고        ca-app-pub-3940256099942544/1033173712
+  //전면동영상광고   ca-app-pub-3940256099942544/8691691433
+  //보상형광고       ca-app-pub-3940256099942544/5224354917
+  //보상형전면광고 	ca-app-pub-3940256099942544/5354046379
+
+  //final String IOSTestUnitId = '';
+  final String androidTestUnitId='ca-app-pub-3940256099942544/6300978111';
+  final String iOSTestUnitId='ca-app-pub-3940256099942544/6300978111';
+  BannerAd? banner;
+  @override
+  void initState(){
+    super.initState();
+    banner = BannerAd(
+      listener: BannerAdListener(),
+      size: AdSize.banner,
+      adUnitId: Platform.isIOS? iOSTestUnitId : androidTestUnitId,
+      request: AdRequest(),
+    );
+
+  }
 
   @override
   Widget build(BuildContext context) => DefaultTabController(
@@ -91,13 +112,6 @@ class _MainPageState extends State<MainPage> {
               Setting('cvgf'),
             ],
           ),
-          /*bottomNavigationBar:
-             _isAdLoaded ? Container(
-              height: _bannerAd.size.height.toDouble(),
-              width: _bannerAd.size.height.toDouble(),
-              child: AdWidget(ad: _bannerAd,),
-            ) : SizedBox(
-            ),*/
         ),
       );
 }

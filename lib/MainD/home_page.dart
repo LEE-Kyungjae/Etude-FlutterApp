@@ -1,9 +1,8 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:mafiaexp/MainD/MainPage.dart';
-
 import '../LoginD/LoginD.dart';
-
+// 로그인시 페이지이동기능
 class HomePage extends StatefulWidget {
   const HomePage({Key? key}) : super(key: key);
 

@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 
 //import '../DiceD/exp.dart';
-
+//계산기 버튼프리셋
 class MainPageButton extends StatelessWidget {
   MainPageButton(
       {required this.color,
@@ -16,7 +16,8 @@ class MainPageButton extends StatelessWidget {
   final String svgimage;
 
   @override
-  Widget build(BuildContext context) {//
+  Widget build(BuildContext context) {
+    //
     return Container(
       margin: EdgeInsets.fromLTRB(10, 20, 10, 0),
       child: SizedBox(
@@ -43,8 +44,11 @@ class MainPageButton extends StatelessWidget {
                 height: 50,
                 width: 50,
               ),
-              SizedBox(height: 2,width: 2,)
-              ,text,
+              SizedBox(
+                height: 2,
+                width: 2,
+              ),
+              text,
             ],
           ),
         ),
