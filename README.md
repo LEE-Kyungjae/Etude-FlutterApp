@@ -1,6 +1,6 @@
 # mafiaexp
 
-A new Flutter project.
+![대체 텍스트](./viewstr.jpg)
 
 ## Getting Started
 
