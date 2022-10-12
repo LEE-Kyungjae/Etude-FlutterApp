@@ -1,12 +1,12 @@
 # mafiaGameTipApp 
 
-##[http] &nbsp;
-##[json] &nbsp;
-##[buttonController] &nbsp;
-##[admob] &nbsp;
-##[freeimage] &nbsp;
+##http 
+##json 
+##[buttonController] 
+##[admob] 
+##[freeimage] 
 
-##[loginAuth-firebase/logout] &nbsp;
+##[loginAuth-firebase/logout] 
 코딩셰프 &nbsp;
 https://www.youtube.com/watch?v=se6wKk-w8lI &nbsp;
 Johannes Milke &nbsp;
