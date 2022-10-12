@@ -25,3 +25,6 @@ https://www.youtube.com/watch?v=dHBF4IJZvHk
 
 ## appStructure
 ![대체 텍스트](./viewstr.jpg)
+
+## Lisence
+© 2022 LEE Kyungjae <leejera0120@gmail.com>
