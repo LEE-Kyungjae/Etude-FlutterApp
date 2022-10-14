@@ -47,8 +47,8 @@ class _PostBoxState extends State<PostBox> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Color(0xffB2E1FF),
-        title: Text('우체통 계산기',style: TextStyle(color: Colors.black87),),
+        backgroundColor: const Color(0xffB2E1FF),
+        title: const Text('우체통 계산기',style: TextStyle(color: Colors.black87),),
       ),
       body: Center(
         child: SingleChildScrollView(
@@ -56,37 +56,37 @@ class _PostBoxState extends State<PostBox> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
-                margin: EdgeInsets.only(left: 20.0, right: 20.0),
+                margin: const EdgeInsets.only(left: 20.0, right: 20.0),
                 width: 200.0,
                 child: TextField(
                   //시작하자마자 이메일에 키보드뜨는거 ->오토포커스
                   //autofocus: true,
                   controller: controller1,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     labelText: '현재 우편함',
                   ),
                   keyboardType: TextInputType.number,
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(left: 20.0, right: 20.0),
+                margin: const EdgeInsets.only(left: 20.0, right: 20.0),
                 width: 200.0,
                 child: TextField(
                   //시작하자마자 이메일에 키보드뜨는거 ->오토포커스
                   //autofocus: true,
                   controller: controller2,
-                  decoration: InputDecoration(labelText: '목표 우편함'),
+                  decoration: const InputDecoration(labelText: '목표 우편함'),
                   keyboardType: TextInputType.number,
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(left: 20.0, right: 20.0),
+                margin: const EdgeInsets.only(left: 20.0, right: 20.0),
                 width: 200.0,
                 child: TextField(
                   //시작하자마자 이메일에 키보드뜨는거 ->오토포커스
                   //autofocus: true,
                   controller: controller3,
-                  decoration: InputDecoration(labelText: '루나환율'),
+                  decoration: const InputDecoration(labelText: '루나환율'),
                   keyboardType: TextInputType.number,
                 ),
               ),
@@ -126,14 +126,14 @@ class _PostBoxState extends State<PostBox> {
                   ]),
                 ],
               ),*/
-              SizedBox(
+              const SizedBox(
                 height: 60.0,
               ),
               ButtonTheme(
                 minWidth: 100.0,
                 height: 60.0,
                 child: ElevatedButton(
-                    child: Icon(
+                    child: const Icon(
                       Icons.play_arrow,
                       color: Colors.white,
                       size: 50.0,
@@ -162,12 +162,12 @@ class _PostBoxState extends State<PostBox> {
                       }
                     }),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Text(
                 '$resultcomma 루블이 필요합니다.',
-                style: TextStyle(
+                style: const TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 21,
                   color: Colors.black87,
@@ -175,7 +175,7 @@ class _PostBoxState extends State<PostBox> {
               ),
               Text(
                 '루블 구매시 약 $lettercomma 루나가 필요합니다.',
-                style: TextStyle(
+                style: const TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 21,
                   color: Colors.black87,
@@ -183,7 +183,7 @@ class _PostBoxState extends State<PostBox> {
               ),
               Text(
                 '아이폰 약 $ioswon원',
-                style: TextStyle(
+                style: const TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 21,
                   color: Colors.black87,
@@ -191,7 +191,7 @@ class _PostBoxState extends State<PostBox> {
               ),
               Text(
                 '안드로이드 약 $androidwon 원',
-                style: TextStyle(
+                style: const TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 21,
                   color: Colors.black87,
@@ -229,7 +229,7 @@ int calc(int m, int n) {
 }
 
 double lunacalc(int result, int z) {
-  var buyluna;
+  double buyluna;
 // var luna;
   int luble;
   int han;

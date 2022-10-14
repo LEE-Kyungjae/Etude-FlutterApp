@@ -67,8 +67,8 @@ class _CardAState extends State<CardA> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Color(0xffAFB4FF),
-        title: Text('카드 계산기'),
+        backgroundColor: const Color(0xffAFB4FF),
+        title: const Text('카드 계산기'),
       ),
       body: Center(
         child: SingleChildScrollView(
@@ -78,39 +78,39 @@ class _CardAState extends State<CardA> {
               Container(
                 child: Column(
                   children: [
-                    Text('만들고싶은 카드수'),
+                    const Text('만들고싶은 카드수'),
                     Container(
-                      margin: EdgeInsets.only(left: 100.0, right: 100.0),
+                      margin: const EdgeInsets.only(left: 100.0, right: 100.0),
                       width: 300.0,
                       child: TextField(
                         //시작하자마자 이메일에 키보드뜨는거 ->오토포커스
                         //autofocus: true,
                         controller: controller1,
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                           labelText: '6티어',
                         ),
                         keyboardType: TextInputType.number,
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.only(left: 100.0, right: 100.0),
+                      margin: const EdgeInsets.only(left: 100.0, right: 100.0),
                       width: 300.0,
                       child: TextField(
                         //시작하자마자 이메일에 키보드뜨는거 ->오토포커스
                         //autofocus: true,
                         controller: controller2,
-                        decoration: InputDecoration(labelText: '5티어'),
+                        decoration: const InputDecoration(labelText: '5티어'),
                         keyboardType: TextInputType.number,
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.only(left: 100.0, right: 100.0),
+                      margin: const EdgeInsets.only(left: 100.0, right: 100.0),
                       width: 300.0,
                       child: TextField(
                         //시작하자마자 이메일에 키보드뜨는거 ->오토포커스
                         //autofocus: true,
                         controller: controller3,
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                           labelText: '4티어',
                         ),
                         keyboardType: TextInputType.number,
@@ -129,39 +129,39 @@ class _CardAState extends State<CardA> {
                         keyboardType: TextInputType.number,
                       ),
                     ),*/
-                    Text('현재 카드수'),
+                    const Text('현재 카드수'),
                     Container(
-                      margin: EdgeInsets.only(left: 100.0, right: 100.0),
+                      margin: const EdgeInsets.only(left: 100.0, right: 100.0),
                       width: 300.0,
                       child: TextField(
                         //시작하자마자 이메일에 키보드뜨는거 ->오토포커스
                         //autofocus: true,
                         controller: controller5,
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                           labelText: '5티어',
                         ),
                         keyboardType: TextInputType.number,
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.only(left: 100.0, right: 100.0),
+                      margin: const EdgeInsets.only(left: 100.0, right: 100.0),
                       width: 300.0,
                       child: TextField(
                         //시작하자마자 이메일에 키보드뜨는거 ->오토포커스
                         //autofocus: true,
                         controller: controller6,
-                        decoration: InputDecoration(labelText: '4티어'),
+                        decoration: const InputDecoration(labelText: '4티어'),
                         keyboardType: TextInputType.number,
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.only(left: 100.0, right: 100.0),
+                      margin: const EdgeInsets.only(left: 100.0, right: 100.0),
                       width: 300.0,
                       child: TextField(
                         //시작하자마자 이메일에 키보드뜨는거 ->오토포커스
                         //autofocus: true,
                         controller: controller7,
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                           labelText: '3티어',
                         ),
                         keyboardType: TextInputType.number,
@@ -180,20 +180,20 @@ class _CardAState extends State<CardA> {
                         keyboardType: TextInputType.number,
                       ),
                     ),*/
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 60.0,
               ),
               ButtonTheme(
                 minWidth: 100.0,
                 height: 60.0,
                 child: ElevatedButton(
-                    child: Icon(
+                    child: const Icon(
                       Icons.play_arrow,
                       color: Colors.white,
                       size: 50.0,
@@ -258,7 +258,7 @@ class _CardAState extends State<CardA> {
                       });
                     }),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
             ],

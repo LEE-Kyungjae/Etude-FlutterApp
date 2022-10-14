@@ -8,36 +8,36 @@
 
 import 'package:flutter/material.dart';
 
-class recruit extends StatelessWidget {
+class Recruit extends StatelessWidget {
   final String title = '1';
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Color(0xffA66CFF),
+      backgroundColor: const Color(0xffA66CFF),
       body: Padding(
         padding: const EdgeInsets.all(8.0),
         child: Column(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            Text('카드교환',
+            const Text('카드교환',
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 16,
                     color: Colors.black)),
             ElevatedButton(
                 child: Padding(
-                  padding: EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Icon(Icons.tips_and_updates),
-                      SizedBox(
+                      const Icon(Icons.tips_and_updates),
+                      const SizedBox(
                         width: 10,
                       ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
+                        children: const [
                           Text(
                             '카드교환 장터로 이동하기',
                             style: TextStyle(
@@ -64,23 +64,23 @@ class recruit extends StatelessWidget {
                       //side: BorderSide(color: Colors.red)
                     ))),
                 onPressed: () => null),
-            Text('엽서교환',
+            const Text('엽서교환',
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 16,
                     color: Colors.black)),
             ElevatedButton(
                 child: Padding(
-                  padding: EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Icon(Icons.tips_and_updates),
-                      SizedBox(
+                      const Icon(Icons.tips_and_updates),
+                      const SizedBox(
                         width: 10,
                       ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
+                        children: const [
                           Text(
                             '엽서교환 이용자 확인하기',
                             style: TextStyle(
@@ -107,23 +107,23 @@ class recruit extends StatelessWidget {
                       //side: BorderSide(color: Colors.red)
                     ))),
                 onPressed: () => null),
-            Text('획초방 일정',
+            const Text('획초방 일정',
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 16,
                     color: Colors.black)),
             ElevatedButton(
                 child: Padding(
-                  padding: EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Icon(Icons.tips_and_updates),
-                      SizedBox(
+                      const Icon(Icons.tips_and_updates),
+                      const SizedBox(
                         width: 10,
                       ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
+                        children: const [
                           Text(
                             '획초방 구인구직하기',
                             style: TextStyle(
@@ -151,23 +151,23 @@ class recruit extends StatelessWidget {
                     ))),
                 onPressed: () => null),
 
-            Text('길드원 모집공고',
+            const Text('길드원 모집공고',
                 style: TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 16,
                     color: Colors.black)),
             ElevatedButton(
                 child: Padding(
-                  padding: EdgeInsets.all(8.0),
+                  padding: const EdgeInsets.all(8.0),
                   child: Row(
                     children: [
-                      Icon(Icons.tips_and_updates),
-                      SizedBox(
+                      const Icon(Icons.tips_and_updates),
+                      const SizedBox(
                         width: 10,
                       ),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
+                        children: const [
                           Text(
                             '길드원 모집공고 확인하기',
                             style: TextStyle(

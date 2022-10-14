@@ -1,5 +1,3 @@
-//import 'dart:ffi';
-//import 'dart:math';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:intl/intl.dart';
@@ -45,8 +43,8 @@ class _DiceState extends State<Dice> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-          backgroundColor: Color(0xffAFB4FF),
-        title: Text('경험치 계산기'),
+          backgroundColor: const Color(0xffAFB4FF),
+        title: const Text('경험치 계산기'),
       ),
       body: Center(
         child: SingleChildScrollView(
@@ -54,26 +52,26 @@ class _DiceState extends State<Dice> {
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Container(
-                margin: EdgeInsets.only(left: 100.0, right: 100.0),
+                margin: const EdgeInsets.only(left: 100.0, right: 100.0),
                 width: 300.0,
                 child: TextField(
                   //시작하자마자 이메일에 키보드뜨는거 ->오토포커스
                   //autofocus: true,
                   controller: controller1,
-                  decoration: InputDecoration(
+                  decoration: const InputDecoration(
                     labelText: '현재레벨 (0%기준)',
                   ),
                   keyboardType: TextInputType.number,
                 ),
               ),
               Container(
-                margin: EdgeInsets.only(left: 100.0, right: 100.0),
+                margin: const EdgeInsets.only(left: 100.0, right: 100.0),
                 width: 300.0,
                 child: TextField(
                   //시작하자마자 이메일에 키보드뜨는거 ->오토포커스
                   //autofocus: true,
                   controller: controller2,
-                  decoration: InputDecoration(labelText: '목표레벨 (0%기준)'),
+                  decoration: const InputDecoration(labelText: '목표레벨 (0%기준)'),
                   keyboardType: TextInputType.number,
                 ),
               ),
@@ -82,7 +80,7 @@ class _DiceState extends State<Dice> {
                 crossAxisAlignment: CrossAxisAlignment.end,
                 children: [
                   Row(mainAxisSize: MainAxisSize.min, children: [
-                    Text('경증테'),
+                    const Text('경증테'),
                     Switch(
                         value: _isSwitch1,
                         onChanged: (value) {
@@ -92,7 +90,7 @@ class _DiceState extends State<Dice> {
                         }),
                   ]),
                   Row(mainAxisSize: MainAxisSize.min, children: [
-                    Text('명찰명패'),
+                    const Text('명찰명패'),
                     Switch(
                         value: _isSwitch2,
                         onChanged: (value) {
@@ -102,7 +100,7 @@ class _DiceState extends State<Dice> {
                         }),
                   ]),
                   Row(mainAxisSize: MainAxisSize.min, children: [
-                    Text('길드버프'),
+                    const Text('길드버프'),
                     Switch(
                         value: _isSwitch3,
                         onChanged: (value) {
@@ -112,7 +110,7 @@ class _DiceState extends State<Dice> {
                         }),
                   ]),
                   Row(mainAxisSize: MainAxisSize.min, children: [
-                    Text('핑방'),
+                    const Text('핑방'),
                     Switch(
                         value: _isSwitch4,
                         onChanged: (value) {
@@ -123,14 +121,14 @@ class _DiceState extends State<Dice> {
                   ]),
                 ],
               ),
-              SizedBox(
+              const SizedBox(
                 height: 60.0,
               ),
               ButtonTheme(
                 minWidth: 100.0,
                 height: 60.0,
                 child: ElevatedButton(
-                    child: Icon(
+                    child: const Icon(
                       Icons.play_arrow,
                       color: Colors.white,
                       size: 50.0,
@@ -152,12 +150,12 @@ class _DiceState extends State<Dice> {
                       }
                     }),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
               Text(
                 '획득해야하는 경험치는 $resultcomma 입니다.',
-                style: TextStyle(
+                style: const TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 21,
                   color: Colors.black87,
@@ -165,7 +163,7 @@ class _DiceState extends State<Dice> {
               ),
               Text(
                 '일엽 $lettercomma 장을 교환해야합니다.',
-                style: TextStyle(
+                style: const TextStyle(
                   fontWeight: FontWeight.bold,
                   fontSize: 21,
                   color: Colors.black87,

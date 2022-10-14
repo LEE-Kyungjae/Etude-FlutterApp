@@ -1,7 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:mafiaexp/MainD/RecruitD/recruit.dart';
-import 'package:mafiaexp/provider/google_sign_in.dart';
-import 'package:provider/provider.dart';
 import 'package:mafiaexp/MainD/SettD/logoutD/logout.dart';
 Widget Setting(String text) => Builder(builder: (context) {
       return Scaffold(
@@ -14,7 +11,7 @@ Widget Setting(String text) => Builder(builder: (context) {
             child: ElevatedButton(
               onPressed: () {
               },
-              child: Text('계정'),
+              child: const Text('계정'),
             ),
           ),
           Container(
@@ -40,7 +37,7 @@ Widget Setting(String text) => Builder(builder: (context) {
               onPressed: () {
                 logout(context);
               },
-              child: Text('로그아웃'),
+              child: const Text('로그아웃'),
             ),
           ),
         ],

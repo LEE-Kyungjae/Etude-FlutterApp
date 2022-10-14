@@ -14,28 +14,28 @@ class _ChatHomePageState extends State<ChatHomePage> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text('chat app'),
+        title: const Text('chat app'),
       ),
       body: Column(
         children: [
           Expanded(child: ListView(
               children:[
-                ChatMessage(),
-                ChatMessage()
+                const ChatMessage(),
+                const ChatMessage()
               ]
           )),
           Container(
-            padding: EdgeInsets.symmetric(horizontal: 8.0),
+            padding: const EdgeInsets.symmetric(horizontal: 8.0),
             child: Row(
               children: [
                 Expanded(
                   child: TextField(
                     controller: _textEditingController,
-                    decoration: InputDecoration(hintText: "메세지 입력"),
+                    decoration: const InputDecoration(hintText: "메세지 입력"),
                     onSubmitted: _handleSubmitted,
                   ),
                 ),
-                SizedBox(
+                const SizedBox(
                   width: 10,
                 ),
                 ElevatedButton(
@@ -44,7 +44,7 @@ class _ChatHomePageState extends State<ChatHomePage> {
                     //print(_textEditingController.text);
                     _textEditingController.clear();
                   },
-                  child: Text("Send"),
+                  child: const Text("Send"),
                   style: ElevatedButton.styleFrom(
                     //foregroundColor: Colors.white,
                     elevation: 0.0,

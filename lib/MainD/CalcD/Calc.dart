@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mafiaexp/MainD/CalcD/ExpD/exp.dart';
-import 'package:mafiaexp/MainD/MainButton.dart';
+import 'package:mafiaexp/MainD/main_button.dart';
 import 'package:mafiaexp/MainD/CalcD/PostBoxD/PostBox.dart';
 import 'package:mafiaexp/MainD/CalcD/ActivityPointD/ActivityPoint.dart';
 import 'package:mafiaexp/MainD/CalcD/ExchangeD/Exchange.dart';
@@ -21,8 +21,8 @@ class Clac extends StatelessWidget {
               Column(children: [
                 MainPageButton(
                     svgimage: "assets/svg/animal/Artboard10.svg",
-                    color: Color(0xff9CEFE),
-                    text: Text(
+                    color: const Color(0xff9CEFE),
+                    text: const Text(
                       '경험치',
                       style: TextStyle(
                           color: Colors.white, fontWeight: FontWeight.bold),
@@ -31,8 +31,8 @@ class Clac extends StatelessWidget {
               ]),
               MainPageButton(
                 svgimage: "assets/svg/animal/Artboard11.svg",
-                color: Color(0xffAFB4FF),
-                text: Text(
+                color: const Color(0xffAFB4FF),
+                text: const Text(
                   ' 환율',
                   style: TextStyle(
                       color: Colors.white, fontWeight: FontWeight.bold),
@@ -41,8 +41,8 @@ class Clac extends StatelessWidget {
               ),
               MainPageButton(
                   svgimage: "assets/svg/animal/Artboard19.svg",
-                  color: Color(0xffB2E1FF),
-                  text: Text(
+                  color: const Color(0xffB2E1FF),
+                  text: const Text(
                     '우체통',
                     style: TextStyle(
                         color: Colors.black87, fontWeight: FontWeight.bold),
@@ -56,8 +56,8 @@ class Clac extends StatelessWidget {
             children: [
               MainPageButton(
                   svgimage: "assets/svg/animal/Artboard24.svg",
-                  color: Color(0xffFCE2DB),
-                  text: Text(
+                  color: const Color(0xffFCE2DB),
+                  text: const Text(
                     '장착',
                     style: TextStyle(
                         color: Colors.black87, fontWeight: FontWeight.bold),
@@ -65,8 +65,8 @@ class Clac extends StatelessWidget {
                   navigator: Dice()),
               MainPageButton(
                   svgimage: "assets/svg/animal/Artboard14.svg",
-                  color: Color(0xffFF8FB1),
-                  text: Text(
+                  color: const Color(0xffFF8FB1),
+                  text: const Text(
                     '주엽',
                     style: TextStyle(
                         color: Colors.white, fontWeight: FontWeight.bold),
@@ -74,8 +74,8 @@ class Clac extends StatelessWidget {
                   navigator: Dice()),
               MainPageButton(
                   svgimage: "assets/svg/animal/Artboard21.svg",
-                  color: Color(0xffB270A2),
-                  text: Text(
+                  color: const Color(0xffB270A2),
+                  text: const Text(
                     '활포',
                     style: TextStyle(
                         color: Colors.white, fontWeight: FontWeight.bold),
@@ -89,8 +89,8 @@ class Clac extends StatelessWidget {
             children: [
               MainPageButton(
                   svgimage: "assets/svg/animal/Artboard29.svg",
-                  color: Color(0xff7A4495),
-                  text: Text(
+                  color: const Color(0xff7A4495),
+                  text: const Text(
                     '카드',
                     style: TextStyle(
                         color: Colors.white, fontWeight: FontWeight.bold),
@@ -98,8 +98,8 @@ class Clac extends StatelessWidget {
                   navigator: CardA()),
               MainPageButton(
                   svgimage: "assets/svg/animal/Artboard17.svg",
-                  color: Color(0xffABC9FF),
-                  text: Text(
+                  color: const Color(0xffABC9FF),
+                  text: const Text(
                     '경험치',
                     style: TextStyle(
                         color: Colors.black87, fontWeight: FontWeight.bold),
@@ -107,8 +107,8 @@ class Clac extends StatelessWidget {
                   navigator: Dice()),
               MainPageButton(
                   svgimage: "assets/svg/animal/Artboard33.svg",
-                  color: Color(0xffFFDEDE),
-                  text: Text(
+                  color: const Color(0xffFFDEDE),
+                  text: const Text(
                     '경험치',
                     style: TextStyle(
                         color: Colors.black87, fontWeight: FontWeight.bold),
@@ -116,7 +116,7 @@ class Clac extends StatelessWidget {
                   navigator: Dice()),
             ],
           ),
-          SizedBox(
+          const SizedBox(
             height: 30,
           ),
         ],

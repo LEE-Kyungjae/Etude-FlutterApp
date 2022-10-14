@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-//import 'package:fluttertoast/fluttertoast.dart';
 import 'package:intl/intl.dart';
 
 var f = NumberFormat('###,###,###,###,###');
@@ -50,8 +49,8 @@ class _ExchangeState extends State<Exchange> {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: AppBar(
-        backgroundColor: Color(0xffAFB4FF),
-        title: Text('환율 계산기'),
+        backgroundColor: const Color(0xffAFB4FF),
+        title: const Text('환율 계산기'),
       ),
       body: Center(
         child: SingleChildScrollView(
@@ -62,32 +61,32 @@ class _ExchangeState extends State<Exchange> {
                 color: Colors.redAccent,
                 child: Column(
                   children: [
-                    Text('판매자용'),
+                    const Text('판매자용'),
                     Container(
-                      margin: EdgeInsets.only(left: 100.0, right: 100.0),
+                      margin: const EdgeInsets.only(left: 100.0, right: 100.0),
                       width: 300.0,
                       child: TextField(
                         //시작하자마자 이메일에 키보드뜨는거 ->오토포커스
                         //autofocus: true,
                         controller: controller1,
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                           labelText: '판매루블',
                         ),
                         keyboardType: TextInputType.number,
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.only(left: 100.0, right: 100.0),
+                      margin: const EdgeInsets.only(left: 100.0, right: 100.0),
                       width: 300.0,
                       child: TextField(
                         //시작하자마자 이메일에 키보드뜨는거 ->오토포커스
                         //autofocus: true,
                         controller: controller2,
-                        decoration: InputDecoration(labelText: '가격루나'),
+                        decoration: const InputDecoration(labelText: '가격루나'),
                         keyboardType: TextInputType.number,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Text('기준환율 $resulty'),
@@ -100,47 +99,47 @@ class _ExchangeState extends State<Exchange> {
                 color: Colors.deepPurple,
                 child: Column(
                   children: [
-                    Text('구매자용'),
+                    const Text('구매자용'),
                     Container(
-                      margin: EdgeInsets.only(left: 100.0, right: 100.0),
+                      margin: const EdgeInsets.only(left: 100.0, right: 100.0),
                       width: 300.0,
                       child: TextField(
                         //시작하자마자 이메일에 키보드뜨는거 ->오토포커스
                         //autofocus: true,
                         controller: controller3,
-                        decoration: InputDecoration(
+                        decoration: const InputDecoration(
                           labelText: '구매루블',
                         ),
                         keyboardType: TextInputType.number,
                       ),
                     ),
                     Container(
-                      margin: EdgeInsets.only(left: 100.0, right: 100.0),
+                      margin: const EdgeInsets.only(left: 100.0, right: 100.0),
                       width: 300.0,
                       child: TextField(
                         //시작하자마자 이메일에 키보드뜨는거 ->오토포커스
                         //autofocus: true,
                         controller: controller4,
-                        decoration: InputDecoration(labelText: '기준환율'),
+                        decoration: const InputDecoration(labelText: '기준환율'),
                         keyboardType: TextInputType.number,
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 10,
                     ),
                     Center(child: Text("$outputkijun",textAlign: TextAlign.center)),
-                    Text('판매가격 루나\n'),
+                    const Text('판매가격 루나\n'),
                   ],
                 ),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 60.0,
               ),
               ButtonTheme(
                 minWidth: 100.0,
                 height: 60.0,
                 child: ElevatedButton(
-                    child: Icon(
+                    child: const Icon(
                       Icons.play_arrow,
                       color: Colors.white,
                       size: 50.0,
@@ -163,7 +162,7 @@ class _ExchangeState extends State<Exchange> {
                       });
                     }),
               ),
-              SizedBox(
+              const SizedBox(
                 height: 20,
               ),
             ],

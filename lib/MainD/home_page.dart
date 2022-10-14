@@ -1,6 +1,6 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
-import 'package:mafiaexp/MainD/MainPage.dart';
+import 'package:mafiaexp/MainD/main_page.dart';
 import '../LoginD/LoginD.dart';
 // 로그인시 페이지이동기능
 class HomePage extends StatefulWidget {
@@ -19,13 +19,13 @@ class _HomePageState extends State<HomePage> {
             builder: (context, snapshot) {
               if (snapshot.connectionState == ConnectionState.waiting) {
                 print('waiting');
-                return Center(child: CircularProgressIndicator());
+                return const Center(child: CircularProgressIndicator());
               } else if (snapshot.hasData) {
                 print('corrected');
-                return MainPage();
+                return const MainPage();
               } else if (snapshot.hasError) {
                 print('failed1');
-                return Center(child: Text('something went wrong!'));
+                return const Center(child: const Text('something went wrong!'));
               } else {
                 print('failed2');
                 return LogIn();

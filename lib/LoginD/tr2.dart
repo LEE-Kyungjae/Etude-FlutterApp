@@ -6,13 +6,13 @@ build3(BuildContext context) => showDialog(
     builder: (BuildContext context) => Dialog(
         shape:
         RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
-        backgroundColor: Color(0xffB1E1FF),
+        backgroundColor: const Color(0xffB1E1FF),
         child: SingleChildScrollView(
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
               Container(
-                  padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                  padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -24,14 +24,14 @@ build3(BuildContext context) => showDialog(
                               primary: Colors.transparent,
                               elevation: 0,
                             ),
-                            child: FaIcon(FontAwesomeIcons.solidWindowClose)),
+                            child: const FaIcon(FontAwesomeIcons.solidWindowClose)),
                       ),
-                      Spacer(flex: 1,),
-                      Text(
+                      const Spacer(flex: 1,),
+                      const Text(
                         '이용약관',
                         style: TextStyle(fontSize: 20),
                       ),
-                      Spacer(flex: 1,),
+                      const Spacer(flex: 1,),
                       ElevatedButton(
                           onPressed: () {
                             Navigator.pop(context);
@@ -41,12 +41,12 @@ build3(BuildContext context) => showDialog(
                             primary: Colors.transparent,
                             elevation: 0,
                           ),
-                          child: FaIcon(FontAwesomeIcons.solidWindowClose)),
+                          child: const FaIcon(FontAwesomeIcons.solidWindowClose)),
                     ],
                   )),
               Container(
-                padding: EdgeInsets.fromLTRB(40, 10, 40, 10),
-                child: Text("제1장 총 칙\n"
+                padding: const EdgeInsets.fromLTRB(40, 10, 40, 10),
+                child: const Text("제1장 총 칙\n"
                     "제1조 \n"
                     "（이용약관）\n"
                     "1. 그림자정부 어플 (이하, ‘앱’라고 함)가 실시하는 Peach앱(이하, ‘본 앱’이라고 함)을 이용할 때는 이 Peach앱의 이용규약(이하, ‘본 규약’이라고 함)에 동의한 후에 본 앱을 다운로드 받고, 본 규약을 준수해야 합니다. 본 규약은 본 앱을 이용하는 분들(이하, ‘이용자’라고 함)이 본 앱을 이용할 때 적용됩니다. 만약 동의하실 수 없다면 대단히 죄송하지만 이용을 삼가 주십시오.\n"
@@ -148,7 +148,7 @@ build3(BuildContext context) => showDialog(
                         mainAxisSize: MainAxisSize.min,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text('그림자정부 이용약관'),
+                          const Text('그림자정부 이용약관'),
                         ],
                       ),
                     ),

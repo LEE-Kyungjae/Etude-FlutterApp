@@ -1,7 +1,3 @@
-//import 'package:firebase_auth/firebase_auth.dart';
-//import 'dart:io';
-//import 'package:mafiaexp/LoginD/LoginD.dart';
-//import 'package:mafiaexp/main.dart';
 import 'package:mafiaexp/AdMob/ad_mob_service.dart';
 import 'package:flutter/material.dart';
 import 'package:mafiaexp/MainD/CalcD/Calc.dart';
@@ -118,7 +114,7 @@ class _MainPageState extends State<MainPage> {
                 Clac(),
                 buildPageTip('Tip'),
                 const chatPage(),
-                recruit(),
+                Recruit(),
                 Setting('cvgf'),
               ],
             ),

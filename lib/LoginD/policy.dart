@@ -6,13 +6,13 @@ build2(BuildContext context) => showDialog(
     builder: (BuildContext context) => Dialog(
         shape:
             RoundedRectangleBorder(borderRadius: BorderRadius.circular(10.0)),
-        backgroundColor: Color(0xffB1E1FF),
+        backgroundColor: const Color(0xffB1E1FF),
         child: SingleChildScrollView(
           child: Column(
             mainAxisSize: MainAxisSize.min,
             children: [
               Container(
-                  padding: EdgeInsets.fromLTRB(10, 10, 10, 10),
+                  padding: const EdgeInsets.fromLTRB(10, 10, 10, 10),
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
@@ -24,16 +24,16 @@ build2(BuildContext context) => showDialog(
                               primary: Colors.transparent,
                               elevation: 0,
                             ),
-                            child: FaIcon(FontAwesomeIcons.solidWindowClose)),
+                            child: const FaIcon(FontAwesomeIcons.solidWindowClose)),
                       ),
-                      Spacer(
+                      const Spacer(
                         flex: 1,
                       ),
-                      Text(
+                      const Text(
                         '개인정보 처리방침',
                         style: TextStyle(fontSize: 20),
                       ),
-                      Spacer(
+                      const Spacer(
                         flex: 1,
                       ),
                       ElevatedButton(
@@ -44,12 +44,12 @@ build2(BuildContext context) => showDialog(
                             primary: Colors.transparent,
                             elevation: 0,
                           ),
-                          child: FaIcon(FontAwesomeIcons.solidWindowClose)),
+                          child: const FaIcon(FontAwesomeIcons.solidWindowClose)),
                     ],
                   )),
               Container(
-                padding: EdgeInsets.fromLTRB(40, 10, 40, 10),
-                child: Text("제1장 총 칙\n"
+                padding: const EdgeInsets.fromLTRB(40, 10, 40, 10),
+                child: const Text("제1장 총 칙\n"
                     "제1조 （이용약관）\n"
                     "1. 그림자정부개발자 (이하, ‘앱’라고 함)가 실시하는 그림자정부 앱(이하, ‘본 앱’이라고 함)을 이용할 때는 이 그림자정부앱의 이용규약(이하, ‘본 규약’이라고 함)에 동의한 후에 본 앱을 다운로드 받고, 본 규약을 준수해야 합니다. 본 규약은 본 앱을 이용하는 분들(이하, ‘이용자’라고 함)이 본 앱을 이용할 때 적용됩니다. 만약 동의하실 수 없다면 대단히 죄송하지만 이용을 삼가 주십시오.\n"
                     ". 본 규약 및 앱이 본 앱에 관해 본 앱상에 게시하거나 직접 이용자에게 개별적으로 연락하는 알림 등은 모두 본 규약과 통합된 것으로서 이용자는 이를 준수할 의무를 지닙니다.\n"
@@ -184,7 +184,7 @@ build2(BuildContext context) => showDialog(
                         mainAxisSize: MainAxisSize.min,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: [
-                          Text('그림자정부 개인정보 처리방침'),
+                          const Text('그림자정부 개인정보 처리방침'),
                         ],
                       ),
                     ),

@@ -10,22 +10,22 @@ class ChatMessage extends StatelessWidget {
       padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8),
       child: Row(
         children: [
-          CircleAvatar(
+          const CircleAvatar(
             backgroundColor: Colors.amberAccent,
             child: (Text("N")),
           ),
-          SizedBox(
+          const SizedBox(
             width: 16,
           ),
           Expanded(
             child: Column(
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
-                Text(
+                const Text(
                   "Name",/*
                   style: TextStyle(fontStyle: FontWeight.bold),*/
                 ),
-                Text("message in "),
+                const Text("message in "),
               ],
             ),
           )//

@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
+
 //계산기 버튼프리셋
 class MainPageButton extends StatelessWidget {
-  MainPageButton(
+  const MainPageButton(
       {required this.color,
       required this.text,
       required this.navigator,
@@ -17,7 +18,7 @@ class MainPageButton extends StatelessWidget {
   Widget build(BuildContext context) {
     //
     return Container(
-      margin: EdgeInsets.fromLTRB(10, 20, 10, 0),
+      margin: const EdgeInsets.fromLTRB(10, 20, 10, 0),
       child: SizedBox(
         height: 80.0,
         width: 80.0,
@@ -42,7 +43,7 @@ class MainPageButton extends StatelessWidget {
                 height: 50,
                 width: 50,
               ),
-              SizedBox(
+              const SizedBox(
                 height: 2,
                 width: 2,
               ),

@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
-import 'package:mafiaexp/MainD/MainPage.dart';
+import 'package:mafiaexp/MainD/main_page.dart';
 import 'package:flutter_svg/flutter_svg.dart';
 import 'package:mafiaexp/provider/google_sign_in.dart';
 import 'package:provider/provider.dart';
@@ -23,16 +23,16 @@ class _LogInState extends State<LogIn> {
       backgroundColor: Colors.orangeAccent,
       appBar: AppBar(
         backgroundColor: Colors.purple,
-        title: Text(
+        title: const Text(
           '그림자정부',
           style: TextStyle(fontFamily: "HSSantokki-Regular", fontSize: 40),
         ),
         centerTitle: true,
-        shape: RoundedRectangleBorder(
+        shape: const RoundedRectangleBorder(
             borderRadius: BorderRadius.only(
                 bottomLeft: Radius.circular(1360),
                 bottomRight: Radius.circular(1360))),
-        bottom: PreferredSize(
+        bottom: const PreferredSize(
           preferredSize: Size.fromHeight(90),
           child: SizedBox(),
         ),
@@ -46,7 +46,7 @@ class _LogInState extends State<LogIn> {
             child: SingleChildScrollView(
               child: Column(
                 children: [
-                  Padding(padding: EdgeInsets.only(top: 10)),
+                  const Padding(padding: EdgeInsets.only(top: 10)),
                   Center(
                     child: SvgPicture.asset(
                       'assets/svg/fantasy/Castle.svg',
@@ -58,29 +58,29 @@ class _LogInState extends State<LogIn> {
                     child: Theme(
                         data: ThemeData(
                           primaryColor: Colors.black87,
-                          inputDecorationTheme: InputDecorationTheme(
+                          inputDecorationTheme: const InputDecorationTheme(
                             labelStyle: TextStyle(
                                 fontSize: 15.0, color: Colors.black87),
                           ),
                         ),
                         child: Container(
-                          padding: EdgeInsets.fromLTRB(80, 0, 80, 0),
+                          padding: const EdgeInsets.fromLTRB(80, 0, 80, 0),
                           child: Column(
                             children: [
                               TextField(
                                 //시작하자마자 이메일에 키보드뜨는거 ->오토포커스
                                 //autofocus: true,
                                 controller: controller,
-                                decoration: InputDecoration(labelText: '아이디'),
+                                decoration: const InputDecoration(labelText: '아이디'),
                                 keyboardType: TextInputType.emailAddress,
                               ),
                               TextField(
                                 controller: controller2,
-                                decoration: InputDecoration(labelText: '패스워드'),
+                                decoration: const InputDecoration(labelText: '패스워드'),
                                 keyboardType: TextInputType.text,
                                 obscureText: true,
                               ),
-                              SizedBox(
+                              const SizedBox(
                                 height: 30,
                               ),
                               /* Row(
@@ -101,7 +101,7 @@ class _LogInState extends State<LogIn> {
                                   child: ElevatedButton(
                                     //color: Colors.blueAccent,
                                     //elevation: 0.0,
-                                    child: Icon(
+                                    child: const Icon(
                                       Icons.arrow_forward,
                                       color: Colors.white,
                                       size: 35.0,
@@ -114,7 +114,7 @@ class _LogInState extends State<LogIn> {
                                             MaterialPageRoute(
                                                 builder:
                                                     (BuildContext context) =>
-                                                        MainPage()));
+                                                        const MainPage()));
                                       } else if (controller.text == '42' &&
                                           controller2.text != '42') {
                                         // showSnackBar2(context);
@@ -126,11 +126,11 @@ class _LogInState extends State<LogIn> {
                                       }
                                     },
                                   )),
-                              SizedBox(
+                              const SizedBox(
                                 height: 10,
                               ),
-                              Text("OR"),
-                              SizedBox(
+                              const Text("OR"),
+                              const SizedBox(
                                 height: 10,
                               ),
                               ElevatedButton.icon(
@@ -142,23 +142,23 @@ class _LogInState extends State<LogIn> {
                                                 borderRadius:
                                                     BorderRadius.circular(
                                                         10.0)),
-                                            backgroundColor: Color(0xffB1E1FF),
+                                            backgroundColor: const Color(0xffB1E1FF),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.min,
                                               children: [
                                                 Container(
                                                     padding:
-                                                        EdgeInsets.fromLTRB(
+                                                        const EdgeInsets.fromLTRB(
                                                             10, 10, 10, 10),
-                                                    child: Text(
+                                                    child: const Text(
                                                       '이용약관',
                                                       style: TextStyle(
                                                           fontSize: 20),
                                                     )),
                                                 Container(
-                                                  padding: EdgeInsets.fromLTRB(
+                                                  padding: const EdgeInsets.fromLTRB(
                                                       40, 10, 40, 10),
-                                                  child: Text(
+                                                  child: const Text(
                                                       '본 어플을 사용하는 모든 이용자는 "그림자정부"의 이용약관 및 개인정보처리방침에 동의합니다.'),
                                                 ),
                                                 Container(
@@ -183,7 +183,7 @@ class _LogInState extends State<LogIn> {
                                                                     _checkbox = value!;
                                                                   });
                                                                 }),*/
-                                                            Text('그림자정부 이용약관'),
+                                                            const Text('그림자정부 이용약관'),
                                                             TextButton(
                                                               onPressed: () {
                                                                 {
@@ -192,7 +192,7 @@ class _LogInState extends State<LogIn> {
                                                                 }
                                                               },
                                                               child:
-                                                                  Text("자세히보기"),
+                                                                  const Text("자세히보기"),
                                                             ),
                                                           ],
                                                         ),
@@ -200,21 +200,21 @@ class _LogInState extends State<LogIn> {
                                                       Container(
                                                         height: 40,
                                                         padding:
-                                                            EdgeInsets.fromLTRB(
+                                                            const EdgeInsets.fromLTRB(
                                                                 10, 0, 10, 0),
                                                         child: Row(
                                                           mainAxisAlignment:
                                                               MainAxisAlignment
                                                                   .center,
                                                           children: [
-                                                            Text(
+                                                            const Text(
                                                                 '그림자정부 개인정보 처리방침'),
                                                             TextButton(
                                                               onPressed: () {
                                                                 build2(context);
                                                               },
                                                               child:
-                                                                  Text("자세히보기"),
+                                                                  const Text("자세히보기"),
                                                             )
                                                           ],
                                                         ),
@@ -222,11 +222,11 @@ class _LogInState extends State<LogIn> {
                                                     ],
                                                   ),
                                                 ),
-                                                SizedBox(
+                                                const SizedBox(
                                                   height: 10,
                                                 ),
                                                 Container(
-                                                  padding: EdgeInsets.fromLTRB(
+                                                  padding: const EdgeInsets.fromLTRB(
                                                       10, 0, 10, 0),
                                                   child: SizedBox(
                                                     width: 250,
@@ -240,8 +240,8 @@ class _LogInState extends State<LogIn> {
                                                         provider.googleLogin();
                                                         Navigator.pop(context);
                                                       },
-                                                      label: Text('동의합니다.'),
-                                                      icon: FaIcon(
+                                                      label: const Text('동의합니다.'),
+                                                      icon: const FaIcon(
                                                         FontAwesomeIcons.google,
                                                         color: Colors.redAccent,
                                                       ),
@@ -250,7 +250,7 @@ class _LogInState extends State<LogIn> {
                                                         primary: Colors.white,
                                                         onPrimary:
                                                             Colors.black87,
-                                                        minimumSize: Size(
+                                                        minimumSize: const Size(
                                                             double.infinity,
                                                             50),
                                                       ),
@@ -258,7 +258,7 @@ class _LogInState extends State<LogIn> {
                                                   ),
                                                 ),
                                                 Container(
-                                                  padding: EdgeInsets.fromLTRB(
+                                                  padding: const EdgeInsets.fromLTRB(
                                                       10, 10, 10, 20),
                                                   child: SizedBox(
                                                     width: 250,
@@ -267,13 +267,13 @@ class _LogInState extends State<LogIn> {
                                                       onPressed: () {
                                                         Navigator.pop(context);
                                                       },
-                                                      child: Text('동의하지않습니다'),
+                                                      child: const Text('동의하지않습니다'),
                                                       style: ElevatedButton
                                                           .styleFrom(
                                                         primary: Colors.white,
                                                         onPrimary:
                                                             Colors.black87,
-                                                        minimumSize: Size(
+                                                        minimumSize: const Size(
                                                             double.infinity,
                                                             50),
                                                       ),
@@ -290,10 +290,10 @@ class _LogInState extends State<LogIn> {
                                 style: ElevatedButton.styleFrom(
                                   primary: Colors.white,
                                   onPrimary: Colors.black87,
-                                  minimumSize: Size(double.infinity, 50),
+                                  minimumSize: const Size(double.infinity, 50),
                                 ),
-                                label: Text('구글아이디로 로그인하기'),
-                                icon: FaIcon(
+                                label: const Text('구글아이디로 로그인하기'),
+                                icon: const FaIcon(
                                   FontAwesomeIcons.google,
                                   color: Colors.redAccent,
                                 ),

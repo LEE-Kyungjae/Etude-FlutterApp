@@ -11,17 +11,17 @@ class chatPage extends StatelessWidget {
         height: 60,
         child: ElevatedButton(
             style: ElevatedButton.styleFrom(
-                padding: EdgeInsets.symmetric(horizontal: 0, vertical: 0),
+                padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 0),
                 textStyle:
-                    TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
-            child: Text(
+                    const TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
+            child: const Text(
               '채팅방 입장',
               style: TextStyle(fontSize: 20),
             ),
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => chatpage()),
+                MaterialPageRoute(builder: (context) => const chatpage()),
               );
             }),
       ),
@@ -29,17 +29,17 @@ class chatPage extends StatelessWidget {
         height: 60,
         child: ElevatedButton(
             style: ElevatedButton.styleFrom(
-                padding: EdgeInsets.symmetric(horizontal: 0, vertical: 0),
+                padding: const EdgeInsets.symmetric(horizontal: 0, vertical: 0),
                 textStyle:
-                TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
-            child: Text(
+                const TextStyle(fontSize: 30, fontWeight: FontWeight.bold)),
+            child: const Text(
               'listview',
               style: TextStyle(fontSize: 20),
             ),
             onPressed: () {
               Navigator.push(
                 context,
-                MaterialPageRoute(builder: (context) => chatpage()),
+                MaterialPageRoute(builder: (context) => const chatpage()),
               );
             }),
       ),
