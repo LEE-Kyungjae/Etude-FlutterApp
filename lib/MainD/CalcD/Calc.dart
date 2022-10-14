@@ -117,7 +117,7 @@ class clac extends StatelessWidget {
             ],
           ),
           SizedBox(
-            height: 180,
+            height: 30,
           ),
         ],
       ),

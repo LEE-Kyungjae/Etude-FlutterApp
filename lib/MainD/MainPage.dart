@@ -119,7 +119,7 @@ class _MainPageState extends State<MainPage> {
               children: [
                 clac(),
                 buildPageTip('Tip'),
-                Chatting('weqwe'),
+                chatPage(),
                 recruit(),
                 Setting('cvgf'),
               ],
