@@ -117,12 +117,12 @@ class _LogInState extends State<LogIn> {
                                                         MainPage()));
                                       } else if (controller.text == '42' &&
                                           controller2.text != '42') {
-                                        showSnackBar2(context);
+                                        // showSnackBar2(context);
                                       } else if (controller.text != '42' &&
                                           controller2.text == '42') {
-                                        showSnackBar3(context);
+                                        // showSnackBar3(context);
                                       } else {
-                                        showSnackBar(context);
+                                        // showSnackBar(context);
                                       }
                                     },
                                   )),
@@ -310,36 +310,36 @@ class _LogInState extends State<LogIn> {
     );
   }
 }
-
-void showSnackBar(BuildContext context) {
-  Scaffold.of(context).showSnackBar(SnackBar(
-    content: Text(
-      '로그인 정보를 다시 확인하세요',
-      textAlign: TextAlign.center,
-    ),
-    duration: Duration(seconds: 2),
-    backgroundColor: Colors.blue,
-  ));
-}
-
-void showSnackBar2(BuildContext context) {
-  Scaffold.of(context).showSnackBar(SnackBar(
-    content: Text(
-      '비밀번호가 일치하지않습니다.',
-      textAlign: TextAlign.center,
-    ),
-    duration: Duration(seconds: 2),
-    backgroundColor: Colors.blue,
-  ));
-}
-
-void showSnackBar3(BuildContext context) {
-  Scaffold.of(context).showSnackBar(SnackBar(
-    content: Text(
-      'dice 철자가 일치하지않습니다.',
-      textAlign: TextAlign.center,
-    ),
-    duration: Duration(seconds: 2),
-    backgroundColor: Colors.blue,
-  ));
-}
+//
+// void showSnackBar(BuildContext context) {
+//   Scaffold.of(context).showSnackBar(SnackBar(
+//     content: Text(
+//       '로그인 정보를 다시 확인하세요',
+//       textAlign: TextAlign.center,
+//     ),
+//     duration: Duration(seconds: 2),
+//     backgroundColor: Colors.blue,
+//   ));
+// }
+//
+// void showSnackBar2(BuildContext context) {
+//   Scaffold.of(context).showSnackBar(SnackBar(
+//     content: Text(
+//       '비밀번호가 일치하지않습니다.',
+//       textAlign: TextAlign.center,
+//     ),
+//     duration: Duration(seconds: 2),
+//     backgroundColor: Colors.blue,
+//   ));
+// }
+//
+// void showSnackBar3(BuildContext context) {
+//   Scaffold.of(context).showSnackBar(SnackBar(
+//     content: Text(
+//       'dice 철자가 일치하지않습니다.',
+//       textAlign: TextAlign.center,
+//     ),
+//     duration: Duration(seconds: 2),
+//     backgroundColor: Colors.blue,
+//   ));
+// }
