@@ -15,7 +15,8 @@ class LogIn extends StatefulWidget {
 class _LogInState extends State<LogIn> {
   TextEditingController controller = TextEditingController();
   TextEditingController controller2 = TextEditingController();
-  var _checkbox = false;
+
+  //var _checkbox = false;
 
   @override
   Widget build(BuildContext context) {
@@ -71,12 +72,14 @@ class _LogInState extends State<LogIn> {
                                 //시작하자마자 이메일에 키보드뜨는거 ->오토포커스
                                 //autofocus: true,
                                 controller: controller,
-                                decoration: const InputDecoration(labelText: '아이디'),
+                                decoration:
+                                    const InputDecoration(labelText: '아이디'),
                                 keyboardType: TextInputType.emailAddress,
                               ),
                               TextField(
                                 controller: controller2,
-                                decoration: const InputDecoration(labelText: '패스워드'),
+                                decoration:
+                                    const InputDecoration(labelText: '패스워드'),
                                 keyboardType: TextInputType.text,
                                 obscureText: true,
                               ),
@@ -117,12 +120,12 @@ class _LogInState extends State<LogIn> {
                                                         const MainPage()));
                                       } else if (controller.text == '42' &&
                                           controller2.text != '42') {
-                                        // showSnackBar2(context);
+                                        scaffoldMessenger(context);
                                       } else if (controller.text != '42' &&
                                           controller2.text == '42') {
-                                        // showSnackBar3(context);
+                                        scaffoldMessenger(context);
                                       } else {
-                                        // showSnackBar(context);
+                                        scaffoldMessenger(context);
                                       }
                                     },
                                   )),
@@ -142,92 +145,94 @@ class _LogInState extends State<LogIn> {
                                                 borderRadius:
                                                     BorderRadius.circular(
                                                         10.0)),
-                                            backgroundColor: const Color(0xffB1E1FF),
+                                            backgroundColor:
+                                                const Color(0xffB1E1FF),
                                             child: Column(
                                               mainAxisSize: MainAxisSize.min,
                                               children: [
                                                 Container(
-                                                    padding:
-                                                        const EdgeInsets.fromLTRB(
-                                                            10, 10, 10, 10),
+                                                    padding: const EdgeInsets
+                                                            .fromLTRB(
+                                                        10, 10, 10, 10),
                                                     child: const Text(
                                                       '이용약관',
                                                       style: TextStyle(
                                                           fontSize: 20),
                                                     )),
                                                 Container(
-                                                  padding: const EdgeInsets.fromLTRB(
-                                                      40, 10, 40, 10),
+                                                  padding:
+                                                      const EdgeInsets.fromLTRB(
+                                                          40, 10, 40, 10),
                                                   child: const Text(
                                                       '본 어플을 사용하는 모든 이용자는 "그림자정부"의 이용약관 및 개인정보처리방침에 동의합니다.'),
                                                 ),
-                                                Container(
-                                                  /*
+
+                                                /*
                                                   padding: EdgeInsets.fromLTRB(
                                                       10, 0, 10, 0),*/
-                                                  child: Column(
-                                                    children: [
-                                                      Container(
-                                                        height: 40,
-                                                        child: Row(
-                                                          mainAxisSize:
-                                                              MainAxisSize.min,
-                                                          mainAxisAlignment:
-                                                              MainAxisAlignment
-                                                                  .center,
-                                                          children: [
-                                                            /*Checkbox(
+                                                Column(
+                                                  children: [
+                                                    SizedBox(
+                                                      height: 40,
+                                                      child: Row(
+                                                        mainAxisSize:
+                                                            MainAxisSize.min,
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .center,
+                                                        children: [
+                                                          /*Checkbox(
                                                                 value: _checkbox,
                                                                 onChanged: (value) {
                                                                   setState(() {
                                                                     _checkbox = value!;
                                                                   });
                                                                 }),*/
-                                                            const Text('그림자정부 이용약관'),
-                                                            TextButton(
-                                                              onPressed: () {
-                                                                {
-                                                                  build3(
-                                                                      context);
-                                                                }
-                                                              },
-                                                              child:
-                                                                  const Text("자세히보기"),
-                                                            ),
-                                                          ],
-                                                        ),
+                                                          const Text(
+                                                              '그림자정부 이용약관'),
+                                                          TextButton(
+                                                            onPressed: () {
+                                                              {
+                                                                build3(context);
+                                                              }
+                                                            },
+                                                            child: const Text(
+                                                                "자세히보기"),
+                                                          ),
+                                                        ],
                                                       ),
-                                                      Container(
-                                                        height: 40,
-                                                        padding:
-                                                            const EdgeInsets.fromLTRB(
-                                                                10, 0, 10, 0),
-                                                        child: Row(
-                                                          mainAxisAlignment:
-                                                              MainAxisAlignment
-                                                                  .center,
-                                                          children: [
-                                                            const Text(
-                                                                '그림자정부 개인정보 처리방침'),
-                                                            TextButton(
-                                                              onPressed: () {
-                                                                build2(context);
-                                                              },
-                                                              child:
-                                                                  const Text("자세히보기"),
-                                                            )
-                                                          ],
-                                                        ),
+                                                    ),
+                                                    Container(
+                                                      height: 40,
+                                                      padding: const EdgeInsets
+                                                              .fromLTRB(
+                                                          10, 0, 10, 0),
+                                                      child: Row(
+                                                        mainAxisAlignment:
+                                                            MainAxisAlignment
+                                                                .center,
+                                                        children: [
+                                                          const Text(
+                                                              '그림자정부 개인정보 처리방침'),
+                                                          TextButton(
+                                                            onPressed: () {
+                                                              build2(context);
+                                                            },
+                                                            child: const Text(
+                                                                "자세히보기"),
+                                                          )
+                                                        ],
                                                       ),
-                                                    ],
-                                                  ),
+                                                    ),
+                                                  ],
                                                 ),
                                                 const SizedBox(
                                                   height: 10,
                                                 ),
                                                 Container(
-                                                  padding: const EdgeInsets.fromLTRB(
-                                                      10, 0, 10, 0),
+                                                  padding:
+                                                      const EdgeInsets.fromLTRB(
+                                                          10, 0, 10, 0),
                                                   child: SizedBox(
                                                     width: 250,
                                                     height: 50,
@@ -240,16 +245,18 @@ class _LogInState extends State<LogIn> {
                                                         provider.googleLogin();
                                                         Navigator.pop(context);
                                                       },
-                                                      label: const Text('동의합니다.'),
+                                                      label:
+                                                          const Text('동의합니다.'),
                                                       icon: const FaIcon(
                                                         FontAwesomeIcons.google,
                                                         color: Colors.redAccent,
                                                       ),
                                                       style: ElevatedButton
                                                           .styleFrom(
-                                                        primary: Colors.white,
-                                                        onPrimary:
-                                                            Colors.black87,
+                                                        foregroundColor:
+                                                            Colors.black,
+                                                        backgroundColor:
+                                                            Colors.white,
                                                         minimumSize: const Size(
                                                             double.infinity,
                                                             50),
@@ -258,8 +265,9 @@ class _LogInState extends State<LogIn> {
                                                   ),
                                                 ),
                                                 Container(
-                                                  padding: const EdgeInsets.fromLTRB(
-                                                      10, 10, 10, 20),
+                                                  padding:
+                                                      const EdgeInsets.fromLTRB(
+                                                          10, 10, 10, 20),
                                                   child: SizedBox(
                                                     width: 250,
                                                     height: 50,
@@ -267,16 +275,18 @@ class _LogInState extends State<LogIn> {
                                                       onPressed: () {
                                                         Navigator.pop(context);
                                                       },
-                                                      child: const Text('동의하지않습니다'),
                                                       style: ElevatedButton
                                                           .styleFrom(
-                                                        primary: Colors.white,
-                                                        onPrimary:
-                                                            Colors.black87,
+                                                        foregroundColor:
+                                                            Colors.black,
+                                                        backgroundColor:
+                                                            Colors.white,
                                                         minimumSize: const Size(
                                                             double.infinity,
                                                             50),
                                                       ),
+                                                      child: const Text(
+                                                          '동의하지않습니다'),
                                                     ),
                                                   ),
                                                 )
@@ -288,8 +298,8 @@ class _LogInState extends State<LogIn> {
                                 provider.googleLogin();*/
                                 },
                                 style: ElevatedButton.styleFrom(
-                                  primary: Colors.white,
-                                  onPrimary: Colors.black87,
+                                  backgroundColor: Colors.white,
+                                  foregroundColor: Colors.black,
                                   minimumSize: const Size(double.infinity, 50),
                                 ),
                                 label: const Text('구글아이디로 로그인하기'),
@@ -310,6 +320,15 @@ class _LogInState extends State<LogIn> {
       ),
     );
   }
+}
+
+void scaffoldMessenger(BuildContext context) {
+  ScaffoldMessenger.of(context).showSnackBar(
+    const SnackBar(
+      content: Text("Incremented"),
+      duration: Duration(milliseconds: 300),
+    ),
+  );
 }
 //
 // void showSnackBar(BuildContext context) {

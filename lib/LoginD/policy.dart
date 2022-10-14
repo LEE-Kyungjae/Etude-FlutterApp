@@ -21,7 +21,6 @@ build2(BuildContext context) => showDialog(
                         child: ElevatedButton(
                             onPressed: null,
                             style: ElevatedButton.styleFrom(
-                              primary: Colors.transparent,
                               elevation: 0,
                             ),
                             child: const FaIcon(FontAwesomeIcons.solidWindowClose)),
@@ -41,7 +40,7 @@ build2(BuildContext context) => showDialog(
                             Navigator.pop(context);
                           },
                           style: ElevatedButton.styleFrom(
-                            primary: Colors.transparent,
+                            backgroundColor: Colors.transparent,
                             elevation: 0,
                           ),
                           child: const FaIcon(FontAwesomeIcons.solidWindowClose)),
@@ -175,22 +174,21 @@ build2(BuildContext context) => showDialog(
                     " 10. 개인정보 처리방침 변경\n"
                     "①이 개인정보처리방침은 시행일로부터 적용되며, 법령 및 방침에 따른 변경내용의 추가, 삭제 및 정정이 있는 경우에는 변경사항의 시행 7일 전부터 공지사항을 통하여 고지할 것입니다.\n"),
               ),
-              Container(
-                child: Column(
+              Column(
                   children: [
-                    Container(
+                    SizedBox(
                       height: 40,
                       child: Row(
                         mainAxisSize: MainAxisSize.min,
                         mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
-                          const Text('그림자정부 개인정보 처리방침'),
+                        children: const [
+                          Text('그림자정부 개인정보 처리방침'),
                         ],
                       ),
                     ),
                   ],
                 ),
-              ),
+
             ],
           ),
         )));

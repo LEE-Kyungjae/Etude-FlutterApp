@@ -21,7 +21,7 @@ build3(BuildContext context) => showDialog(
                         child: ElevatedButton(
                             onPressed:null,
                             style: ElevatedButton.styleFrom(
-                              primary: Colors.transparent,
+                             backgroundColor: Colors.transparent,
                               elevation: 0,
                             ),
                             child: const FaIcon(FontAwesomeIcons.solidWindowClose)),
@@ -38,7 +38,7 @@ build3(BuildContext context) => showDialog(
 
                           },
                           style: ElevatedButton.styleFrom(
-                            primary: Colors.transparent,
+                            backgroundColor: Colors.transparent,
                             elevation: 0,
                           ),
                           child: const FaIcon(FontAwesomeIcons.solidWindowClose)),
@@ -139,22 +139,20 @@ build3(BuildContext context) => showDialog(
                     "1. 본 규약은 한국법에 따라 해석됩니다.\n"
                     "2. 본 규약과 관련하여 앱과 이용자 간에 소송이 필요한 상황이 발생한 경우, 대한민국의 지방 법원을 제1심 전속적 합의 관할 재판소로 합니다.\n"),
               ),
-              Container(
-                child: Column(
+              Column(
                   children: [
-                    Container(
+                    SizedBox(
                       height: 40,
                       child: Row(
                         mainAxisSize: MainAxisSize.min,
                         mainAxisAlignment: MainAxisAlignment.center,
-                        children: [
+                        children: const [
                           const Text('그림자정부 이용약관'),
                         ],
                       ),
                     ),
                   ],
                 ),
-              ),
             ],
           ),
         )));
