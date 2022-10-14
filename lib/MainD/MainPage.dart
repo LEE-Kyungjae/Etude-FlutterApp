@@ -1,18 +1,16 @@
 //import 'package:firebase_auth/firebase_auth.dart';
-import 'dart:io';
-
-import 'package:flutter/material.dart';
-import 'package:mafiaexp/AdMob/ad_mob_service.dart';
-import 'package:mafiaexp/MainD/CalcD/Calc.dart';
-
+//import 'dart:io';
 //import 'package:mafiaexp/LoginD/LoginD.dart';
 //import 'package:mafiaexp/main.dart';
+import 'package:mafiaexp/AdMob/ad_mob_service.dart';
+import 'package:flutter/material.dart';
+import 'package:mafiaexp/MainD/CalcD/Calc.dart';
 import 'package:mafiaexp/MainD/TipD/tip.dart';
 import 'package:mafiaexp/MainD/SettD/setting.dart';
 import 'package:mafiaexp/MainD/ChatD/chatting.dart';
 import 'RecruitD//recruit.dart';
 import 'package:google_mobile_ads/google_mobile_ads.dart';
-import 'package:mafiaexp/AdMob/ad_mob_service.dart';
+
 //메인페이지 -탭기능
 class MainPage extends StatefulWidget {
   const MainPage({Key? key}) : super(key: key);
@@ -60,7 +58,7 @@ class _MainPageState extends State<MainPage> {
         length: 5,
         child: Scaffold(
             appBar: AppBar(
-              title: Text(
+              title: const Text(
                 '그림자정부',
                 style: TextStyle(fontFamily: 'HSSantokki-Regular'),
               ),
@@ -68,14 +66,14 @@ class _MainPageState extends State<MainPage> {
 
               }, icon: Icon(Icons.menu)),*/
               flexibleSpace: Container(
-                decoration: BoxDecoration(
+                decoration: const BoxDecoration(
                     gradient: LinearGradient(
                   colors: [Color(0xffFFC23C), Color(0xffFA2FB5)],
                   begin: Alignment.bottomRight,
                   end: Alignment.bottomLeft,
                 )),
               ),
-              bottom: TabBar(
+              bottom: const TabBar(
                   indicatorColor: Colors.black87,
                   indicatorWeight: 5,
                   tabs: [
@@ -104,7 +102,7 @@ class _MainPageState extends State<MainPage> {
             drawer: Drawer(
               child: ListView(
                 padding: EdgeInsets.zero,
-                children: [
+                children: const [
                   UserAccountsDrawerHeader(
                       currentAccountPicture: CircleAvatar(
                         backgroundColor: Colors.white,
@@ -114,12 +112,12 @@ class _MainPageState extends State<MainPage> {
                 ],
               ),
             ),
-            backgroundColor: Color(0xffA66CFF),
+            backgroundColor: const Color(0xffA66CFF),
             body: TabBarView(
               children: [
-                clac(),
+                Clac(),
                 buildPageTip('Tip'),
-                chatPage(),
+                const chatPage(),
                 recruit(),
                 Setting('cvgf'),
               ],
@@ -127,7 +125,7 @@ class _MainPageState extends State<MainPage> {
             bottomNavigationBar: _banner == null
                 ? Container()
                 : Container(
-                    margin: EdgeInsets.only(bottom: 12),
+                    margin: const EdgeInsets.only(bottom: 12),
                     height: 52,
                     child: AdWidget(
                       ad: _banner!,

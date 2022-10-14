@@ -5,7 +5,7 @@ import 'package:mafiaexp/MainD/CalcD/PostBoxD/PostBox.dart';
 import 'package:mafiaexp/MainD/CalcD/ActivityPointD/ActivityPoint.dart';
 import 'package:mafiaexp/MainD/CalcD/ExchangeD/Exchange.dart';
 import 'package:mafiaexp/MainD/CalcD/CardD/Card.dart';
-class clac extends StatelessWidget {
+class Clac extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
