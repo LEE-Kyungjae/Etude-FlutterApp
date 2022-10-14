@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:mafiaexp/MainD/MarketD/profile.dart';
+import 'package:mafiaexp/MainD/RecruitD/recruit.dart';
 import 'package:mafiaexp/provider/google_sign_in.dart';
 import 'package:provider/provider.dart';
 
@@ -13,7 +13,7 @@ Widget Setting(String text) => Builder(builder: (context) {
             color: Colors.amber,
             child: ElevatedButton(
               onPressed: () {
-                profile(text);
+                recruit();
               },
               child: Text('계정'),
             ),

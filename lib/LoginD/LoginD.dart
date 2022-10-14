@@ -211,8 +211,7 @@ class _LogInState extends State<LogIn> {
                                                                 '그림자정부 개인정보 처리방침'),
                                                             TextButton(
                                                               onPressed: () {
-                                                                build2(
-                                                                    context);
+                                                                build2(context);
                                                               },
                                                               child:
                                                                   Text("자세히보기"),
@@ -223,7 +222,9 @@ class _LogInState extends State<LogIn> {
                                                     ],
                                                   ),
                                                 ),
-                                                SizedBox(height: 10,),
+                                                SizedBox(
+                                                  height: 10,
+                                                ),
                                                 Container(
                                                   padding: EdgeInsets.fromLTRB(
                                                       10, 0, 10, 0),

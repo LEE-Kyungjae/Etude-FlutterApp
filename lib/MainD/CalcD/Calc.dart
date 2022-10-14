@@ -5,8 +5,11 @@ import 'package:mafiaexp/MainD/CalcD/PostBoxD/PostBox.dart';
 import 'package:mafiaexp/MainD/CalcD/ActivityPointD/ActivityPoint.dart';
 import 'package:mafiaexp/MainD/CalcD/ExchangeD/Exchange.dart';
 import 'package:mafiaexp/MainD/CalcD/CardD/Card.dart';
+class clac extends StatelessWidget {
 
-Widget buildPageCalc(String text) => Center(
+  @override
+  Widget build(BuildContext context) {
+    return Center(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
@@ -119,3 +122,8 @@ Widget buildPageCalc(String text) => Center(
         ],
       ),
     );
+  }
+}
+
+//Widget buildPageCalc(String text) =>
+

@@ -1,7 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_svg/flutter_svg.dart';
-
-//import '../DiceD/exp.dart';
 //계산기 버튼프리셋
 class MainPageButton extends StatelessWidget {
   MainPageButton(
