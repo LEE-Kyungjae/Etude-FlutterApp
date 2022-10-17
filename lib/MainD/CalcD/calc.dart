@@ -32,6 +32,7 @@ class Clac extends StatelessWidget {
               //this.color,
               //this.decoration,
               //this.foregroundDecoration,
+
               ]),
           const SizedBox(height: 20,),
           Row(
