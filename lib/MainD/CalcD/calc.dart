@@ -26,13 +26,13 @@ class Clac extends StatelessWidget {
 
             Container(
               //this.alignment,
-              padding: const EdgeInsets.fromLTRB(0, 0, 15, 0),
-              child: const Text('토큰 3개'),
+              color: Colors.pink,
+              //decoration: ,
+              child: const Text('토큰 3개',),),
               //this.color,
               //this.decoration,
               //this.foregroundDecoration,
-            ),
-          ]),
+              ]),
           const SizedBox(height: 20,),
           Row(
             crossAxisAlignment: CrossAxisAlignment.center,
