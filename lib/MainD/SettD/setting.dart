@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mafiaexp/MainD/SettD/logoutD/logout.dart';
-Widget Setting(String text) => Builder(builder: (context) {
+Widget setting(String text) => Builder(builder: (context) {
       return Scaffold(
           body: ListView(
         padding: EdgeInsets.zero,

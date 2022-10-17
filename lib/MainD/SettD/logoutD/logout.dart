@@ -15,15 +15,15 @@ void logout(context) {
                   borderRadius: BorderRadius.circular(10), color: Colors.white),
               child: Column(
                 children: [
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
-                  Text(
+                  const Text(
                     '로그아웃 하시겠습니까?',
                     style: TextStyle(fontSize: 20),
                   ),
 
-                  SizedBox(
+                  const SizedBox(
                     height: 20,
                   ),
                   Row(
@@ -35,8 +35,8 @@ void logout(context) {
                             final provider = Provider.of<GoogleSignInProvider>(context,listen: false);
                             provider.logout();
                           },
-                          child: Text('예')),
-                      SizedBox(
+                          child: const Text('예')),
+                      const SizedBox(
                         width: 20,
                       ),
                       ElevatedButton(
@@ -44,7 +44,7 @@ void logout(context) {
                             Navigator.of(context).pop();
 
                           },
-                          child: Text('아니오')),
+                          child: const Text('아니오')),
                     ],
                   ),
                 ],

@@ -11,6 +11,8 @@ import 'package:flutter/material.dart';
 class Recruit extends StatelessWidget {
   final String title = '1';
 
+  const Recruit({super.key});
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,6 +29,17 @@ class Recruit extends StatelessWidget {
                     fontSize: 16,
                     color: Colors.black)),
             ElevatedButton(
+                style: ButtonStyle(
+                    foregroundColor:
+                        MaterialStateProperty.all<Color>(Colors.black),
+                    backgroundColor:
+                        MaterialStateProperty.all<Color>(Colors.white),
+                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
+                        RoundedRectangleBorder(
+                      borderRadius: BorderRadius.circular(12),
+                      //side: BorderSide(color: Colors.red)
+                    ))),
+                onPressed: () => null,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
@@ -52,7 +65,13 @@ class Recruit extends StatelessWidget {
                       ),
                     ],
                   ),
-                ),
+                )),
+            const Text('엽서교환',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
+                    color: Colors.black)),
+            ElevatedButton(
                 style: ButtonStyle(
                     foregroundColor:
                         MaterialStateProperty.all<Color>(Colors.black),
@@ -63,13 +82,7 @@ class Recruit extends StatelessWidget {
                       borderRadius: BorderRadius.circular(12),
                       //side: BorderSide(color: Colors.red)
                     ))),
-                onPressed: () => null),
-            const Text('엽서교환',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 16,
-                    color: Colors.black)),
-            ElevatedButton(
+                onPressed: () => null,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
@@ -95,7 +108,13 @@ class Recruit extends StatelessWidget {
                       ),
                     ],
                   ),
-                ),
+                )),
+            const Text('획초방 일정',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
+                    color: Colors.black)),
+            ElevatedButton(
                 style: ButtonStyle(
                     foregroundColor:
                         MaterialStateProperty.all<Color>(Colors.black),
@@ -106,13 +125,7 @@ class Recruit extends StatelessWidget {
                       borderRadius: BorderRadius.circular(12),
                       //side: BorderSide(color: Colors.red)
                     ))),
-                onPressed: () => null),
-            const Text('획초방 일정',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 16,
-                    color: Colors.black)),
-            ElevatedButton(
+                onPressed: () => null,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
@@ -138,7 +151,14 @@ class Recruit extends StatelessWidget {
                       ),
                     ],
                   ),
-                ),
+                )),
+
+            const Text('길드원 모집공고',
+                style: TextStyle(
+                    fontWeight: FontWeight.bold,
+                    fontSize: 16,
+                    color: Colors.black)),
+            ElevatedButton(
                 style: ButtonStyle(
                     foregroundColor:
                         MaterialStateProperty.all<Color>(Colors.black),
@@ -147,16 +167,8 @@ class Recruit extends StatelessWidget {
                     shape: MaterialStateProperty.all<RoundedRectangleBorder>(
                         RoundedRectangleBorder(
                       borderRadius: BorderRadius.circular(12),
-                      //side: BorderSide(color: Colors.red)
                     ))),
-                onPressed: () => null),
-
-            const Text('길드원 모집공고',
-                style: TextStyle(
-                    fontWeight: FontWeight.bold,
-                    fontSize: 16,
-                    color: Colors.black)),
-            ElevatedButton(
+                onPressed: () => null,
                 child: Padding(
                   padding: const EdgeInsets.all(8.0),
                   child: Row(
@@ -182,17 +194,7 @@ class Recruit extends StatelessWidget {
                       ),
                     ],
                   ),
-                ),
-                style: ButtonStyle(
-                    foregroundColor:
-                        MaterialStateProperty.all<Color>(Colors.black),
-                    backgroundColor:
-                        MaterialStateProperty.all<Color>(Colors.white),
-                    shape: MaterialStateProperty.all<RoundedRectangleBorder>(
-                        RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(12),
-                    ))),
-                onPressed: () => null),
+                )),
           ],
         ),
       ),

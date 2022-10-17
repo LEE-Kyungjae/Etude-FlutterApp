@@ -16,25 +16,35 @@ class Clac extends StatelessWidget {
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
+            Opacity(
+              opacity: 0,
+              child: Container(),
+            ),
+
+            Row(
               children: [
-                Opacity(opacity: 0,
-                child:  Container(
+                Container(
+                  decoration: const BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.all(Radius.circular(10)),
+                  ),
+                  child: const Text(
+                    '  토큰 3개  ',style: TextStyle(fontWeight: FontWeight.bold),
+                  ),
                 ),
+                const SizedBox(
+                  width: 10,
                 ),
-
-            Container(
-              //this.alignment,
-              color: Colors.pink,
-              //decoration: ,
-              child: const Text('토큰 3개',),),
-              //this.color,
-              //this.decoration,
-              //this.foregroundDecoration,
-
-              ]),
-          const SizedBox(height: 20,),
+              ],
+            ),
+            //this.color,
+            //this.decoration,
+            //this.foregroundDecoration,
+          ]),
+          const SizedBox(
+            height: 20,
+          ),
           Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,

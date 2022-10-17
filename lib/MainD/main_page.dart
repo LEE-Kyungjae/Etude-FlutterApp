@@ -111,11 +111,11 @@ class _MainPageState extends State<MainPage> {
             backgroundColor: const Color(0xffA66CFF),
             body: TabBarView(
               children: [
-                Clac(),
+                const Clac(),
                 buildPageTip('Tip'),
                 const chatPage(),
                 Recruit(),
-                Setting('cvgf'),
+                setting('cvgf'),
               ],
             ),
             bottomNavigationBar: _banner == null

@@ -1,14 +1,17 @@
 import 'package:flutter/material.dart';
+
 //import 'package:logger/logger.dart';
 import 'package:mafiaexp/MainD/ChatD/chat_message.dart';
 
 class ChatHomePage extends StatefulWidget {
+  const ChatHomePage({super.key});
+
   @override
   State<ChatHomePage> createState() => _ChatHomePageState();
 }
 
 class _ChatHomePageState extends State<ChatHomePage> {
-  TextEditingController _textEditingController = TextEditingController();
+  final TextEditingController _textEditingController = TextEditingController();
 
   @override
   Widget build(BuildContext context) {
@@ -18,12 +21,8 @@ class _ChatHomePageState extends State<ChatHomePage> {
       ),
       body: Column(
         children: [
-          Expanded(child: ListView(
-              children:[
-                const ChatMessage(),
-                const ChatMessage()
-              ]
-          )),
+          Expanded(
+              child: ListView(children: const [ChatMessage(), ChatMessage()])),
           Container(
             padding: const EdgeInsets.symmetric(horizontal: 8.0),
             child: Row(
@@ -44,11 +43,11 @@ class _ChatHomePageState extends State<ChatHomePage> {
                     //print(_textEditingController.text);
                     _textEditingController.clear();
                   },
-                  child: const Text("Send"),
                   style: ElevatedButton.styleFrom(
                     //foregroundColor: Colors.white,
                     elevation: 0.0,
                   ),
+                  child: const Text("Send"),
                 ),
               ],
             ),

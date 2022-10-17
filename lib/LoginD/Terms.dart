@@ -147,7 +147,7 @@ build3(BuildContext context) => showDialog(
                         mainAxisSize: MainAxisSize.min,
                         mainAxisAlignment: MainAxisAlignment.center,
                         children: const [
-                          const Text('그림자정부 이용약관'),
+                          Text('그림자정부 이용약관'),
                         ],
                       ),
                     ),

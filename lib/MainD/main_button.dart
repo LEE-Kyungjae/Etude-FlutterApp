@@ -4,7 +4,7 @@ import 'package:flutter_svg/flutter_svg.dart';
 //계산기 버튼프리셋
 class MainPageButton extends StatelessWidget {
   const MainPageButton(
-      {required this.color,
+      {super.key, required this.color,
       required this.text,
       required this.navigator,
       required this.svgimage});

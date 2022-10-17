@@ -8,6 +8,8 @@ import 'package:mafiaexp/LoginD/Terms.dart';
 import 'package:mafiaexp/LoginD/policy.dart';
 
 class LogIn extends StatefulWidget {
+  const LogIn({super.key});
+
   @override
   State<LogIn> createState() => _LogInState();
 }
