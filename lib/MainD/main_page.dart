@@ -1,6 +1,6 @@
 import 'package:mafiaexp/AdMob/ad_mob_service.dart';
 import 'package:flutter/material.dart';
-import 'package:mafiaexp/MainD/CalcD/Calc.dart';
+import 'package:mafiaexp/MainD/CalcD/calc.dart';
 import 'package:mafiaexp/MainD/TipD/tip.dart';
 import 'package:mafiaexp/MainD/SettD/setting.dart';
 import 'package:mafiaexp/MainD/ChatD/chatting.dart';

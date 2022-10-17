@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:mafiaexp/MainD/ChatD/chatpage.dart';
-
+//chatting->chatpage
 class chatPage extends StatelessWidget {
   const chatPage({Key? key}) : super(key: key);
 

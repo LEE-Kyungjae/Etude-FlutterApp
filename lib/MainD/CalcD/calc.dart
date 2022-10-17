@@ -5,7 +5,9 @@ import 'package:mafiaexp/MainD/CalcD/PostBoxD/PostBox.dart';
 import 'package:mafiaexp/MainD/CalcD/ActivityPointD/ActivityPoint.dart';
 import 'package:mafiaexp/MainD/CalcD/ExchangeD/Exchange.dart';
 import 'package:mafiaexp/MainD/CalcD/CardD/Card.dart';
+
 class Clac extends StatelessWidget {
+  const Clac({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -15,13 +17,31 @@ class Clac extends StatelessWidget {
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
           Row(
+            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: [
+                Opacity(opacity: 0,
+                child:  Container(
+                ),
+                ),
+
+            Container(
+              //this.alignment,
+              padding: const EdgeInsets.fromLTRB(0, 0, 15, 0),
+              child: const Text('토큰 3개'),
+              //this.color,
+              //this.decoration,
+              //this.foregroundDecoration,
+            ),
+          ]),
+          const SizedBox(height: 20,),
+          Row(
             crossAxisAlignment: CrossAxisAlignment.center,
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Column(children: [
                 MainPageButton(
                     svgimage: "assets/svg/animal/Artboard10.svg",
-                    color: const Color(0xff9CEFE),
+                    color: const Color(0x0ff9cefe),
                     text: const Text(
                       '경험치',
                       style: TextStyle(
@@ -117,7 +137,7 @@ class Clac extends StatelessWidget {
             ],
           ),
           const SizedBox(
-            height: 30,
+            height: 50,
           ),
         ],
       ),
@@ -126,4 +146,3 @@ class Clac extends StatelessWidget {
 }
 
 //Widget buildPageCalc(String text) =>
-

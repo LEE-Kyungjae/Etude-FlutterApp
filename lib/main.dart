@@ -6,8 +6,11 @@ import 'package:mafiaexp/MainD/home_page.dart';
 import 'package:mafiaexp/provider/google_sign_in.dart';
 import 'package:provider/provider.dart';
 //import 'package:mafiaexp/MainD/CalcD/CardD/Card.dart';
+import 'package:flutter_native_splash/flutter_native_splash.dart';
 
 Future main() async{
+  //스플래시 스크린때 데이터받기
+  bool data = await fetchData();
   WidgetsFlutterBinding.ensureInitialized();
   await Firebase.initializeApp();
   MobileAds.instance.initialize();
@@ -25,5 +28,12 @@ class MyApp extends StatelessWidget {
 
       ),
     );
+  }
+  Future<bool> fetchData()async{
+  bool data=false;
+  await Future.delayed(Duration(seconds: 3),(){
+    data = true;
+  });
+  return data;
   }
 
