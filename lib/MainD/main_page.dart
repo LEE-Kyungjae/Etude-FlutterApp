@@ -16,28 +16,12 @@ class MainPage extends StatefulWidget {
 }
 
 class _MainPageState extends State<MainPage> {
-  //앱오프닝광고    ca-app-pub-3940256099942544/3419835294
-  //배너광고        ca-app-pub-3940256099942544/6300978111
-  //전면광고        ca-app-pub-3940256099942544/1033173712
-  //전면동영상광고   ca-app-pub-3940256099942544/8691691433
-  //보상형광고       ca-app-pub-3940256099942544/5224354917
-  //보상형전면광고 	ca-app-pub-3940256099942544/5354046379
-
-  //final String IOSTestUnitId = '';
-  //final String androidTestUnitId='ca-app-pub-3940256099942544/6300978111';
-  //final String iOSTestUnitId='ca-app-pub-3940256099942544/6300978111';
   BannerAd? _banner;
 
   @override
   void initState() {
     super.initState();
     _createBannerAd();
-    // banner = BannerAd(
-    //   listener: BannerAdListener(),
-    //   size: AdSize.banner,
-    //   adUnitId: Platform.isIOS? iOSTestUnitId : androidTestUnitId,
-    //   request: AdRequest(),
-    // );
   }
 
   void _createBannerAd() {
@@ -129,27 +113,3 @@ class _MainPageState extends State<MainPage> {
                   )),
       );
 }
-
-/*
-  @override
-  void initState() {
-    super.initState();
-    _initBannerAd();
-  }*/
-/*
-  _initBannerAd() {
-    _bannerAd = BannerAd(
-        size: AdSize.banner,
-        adUnitId: 'ca-app-pub-3461746175008572/8127796404',
-        listener: BannerAdListener(
-          onAdLoaded: (ad) {
-            setState(() {
-              _isAdLoaded = true;
-            });
-          }, onAdFailedToLoad: (ad, error) {},
-
-        ),
-        request: AdRequest()
-    );
-    _bannerAd.load();
-  }*/
